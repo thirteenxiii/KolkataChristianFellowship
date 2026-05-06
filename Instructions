@@ -1,46 +1,42 @@
-Website Revamp Workflow
-Phase 1: Resource Extraction & Technical Audit
-Goal: Identify all assets and find what needs fixing.
+Role: Senior Full-Stack Developer & UI/UX Architect.
+Objective: Rebuild the Kolkata Christian Fellowship (KCF) website as a modern, high-performance Next.js application for Vercel deployment.
 
-Prompt:
-"You are an expert Web Architect. Your task is to perform a deep-crawl and audit of http://kolkatachristianfellowship.net/index.php.
+Phase 1: Local Asset Harvesting (The "Download First" Step)
+Extraction: Use Firecrawl and Playwright to crawl http://kolkatachristianfellowship.net.
 
-Extract Media: Scrape all logos, images, and sermon video links (e.g., the 'Second-Coming Church' series).
-2. Content Capture: Document all ministry descriptions for Sonarpur, Madhyamgram, Sulkuni, Nirmaan, and the School of Excellence.
-3. The 'Broken' Audit: Identify broken links, low-resolution images, and non-responsive PHP elements that need replacing.
+Local Storage: * Save all text content (History, Vision, Ministries) into /data/content/.
 
-CRITICAL: Perform ONLY this extraction and audit. Stop and provide a summary of the extracted assets and a list of 'broken' items. Do not generate any design or code yet."
+Download all images, logos, and icons into /public/assets/.
 
-Phase 2: Sitemap & WordPress Structure
-Goal: Map out the new architecture based on the existing hierarchy.
+Audit: Identify any low-res images or broken PHP links and list them in migration-notes.md.
 
-Prompt:
-"Following the audit, you are now a WordPress SEO specialist. Create a complete sitemap for the KCF revamp that follows the exact existing hierarchy:
-1. Primary Pages: Home, About (History, Vision, Principles, Faith), and Church Corner (Hour of Power, Main Service, Kids Church, Teens on Track, Freedom Church, College & Career).
-2. Outreach & Engagement: Serving Communities (Sonarpur to Micro Credit) and Resource Corner (Sermons, Prayer Wall, Photos).
-3. Dynamic Logic: Design the structure for a dynamic 'Prayer Wall' and a 'Sermon Archive' that supports YouTube embeds and PDF notes.
+Phase 2: Tech Stack & Architecture
+Framework: Next.js (App Router), Tailwind CSS (Styling), Framer Motion (Animations), and Lucide-React (Icons).
 
-CRITICAL: Perform ONLY the structural mapping. Stop once the sitemap and page logic are finalized. Do not generate UI elements or JSON files yet."
+WordPress Parity: To replicate Elementor-style features:
 
-Phase 3: Modern UI/UX Design & Elementor Generation
-Goal: Create the "Church Modern" look and generate the actual page templates.
+Sliders: Implement using Embla Carousel or Swiper.js.
 
-Prompt:
-"Using the approved sitemap, act as a Senior Elementor Designer.
-1. Visual Style: Apply a 'Church Modern' aesthetic—high-contrast typography, warm accent colors, and ample white space.
-2. Key Elements: Create a hero image slider with the mission statement: 'Encountering the Saviour, Equipping the Saints, Encouraging Service'.
-3. Modern Features: Design masonry-style galleries for photos and card-based layouts for sermons to replace the old list format.
-4. Code Generation: Generate the design as Elementor Pro JSON templates or structured CSS/HTML blocks for the 'Home' and 'Sermons' pages.
+Animations: Use Framer Motion for "reveal on scroll" and smooth page transitions.
 
-CRITICAL: Focus only on the UI/UX and JSON template generation. Stop once the templates for the main pages are ready."
+Dynamic Logic: Create a Sermons JSON structure to handle the "Exploring New Testament Churches" series and YouTube embeds (https://www.youtube.com/@KolkataChristianFellowship/streams).
 
-Phase 4: SEO, Responsiveness & Final Export
-Goal: Polish the site for mobile users and provide the final upload kit.
+Phase 3: UI/UX Implementation (Modern "Church" Design)
+Sitemap Preservation: Follow the exact hierarchy: Home, About (History/Faith), Church Corner (Services), Outreach (Sonarpur, Nirmaan, etc.), and Resource Corner.
 
-Prompt:
-"Finalize the KCF website revamp with technical optimizations:
-1. Responsive Design: Apply a Fluid Grid system to fix the legacy 'pinch-to-zoom' issues, ensuring perfect display for Sunday service seekers on mobile.
-2. SEO & CTA: Add meta-descriptions localized to Mukundapur, Kolkata. Strategically place 'Join Us' buttons near the 9:45 AM and 11:00 AM service times.
-3. Export: Package all finalized templates into an 'Elementor Template Kit' format for manual upload.
+Modern Elements:
 
-CRITICAL: This is the final phase. Once these optimizations are complete, provide the final delivery instructions."
+Hero Section: Full-screen dynamic slider with the mission: "Encountering the Saviour, Equipping the Saints, Encouraging Service."
+
+Interactive Prayer Wall: A modern card-based layout where users can see prayer focus areas.
+
+Responsive Service Grid: Clean, high-contrast cards for Sunday 9:45 AM and 11:00 AM services.
+
+Phase 4: Vercel Optimization & GitHub Readiness
+Performance: Optimize images using next/image to ensure a 95+ Lighthouse score.
+
+SEO: Implement Metadata API for each page, focused on Mukundapur, Kolkata.
+
+Final Output: Ensure a clean package.json and .gitignore are present.
+
+CRITICAL: Execute Phase 1 first. Stop and show me the directory structure of the downloaded assets before writing a single line of React code.

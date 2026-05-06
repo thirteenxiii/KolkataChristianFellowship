@@ -1,0 +1,29 @@
+[
+  {
+    "id": "prayer-1",
+    "requesterName": "Anonymous",
+    "requestText": "Please pray for my mother's health. She is undergoing surgery this Friday.",
+    "dateSubmitted": "2023-11-01T10:00:00Z",
+    "isAnswered": false,
+    "prayedForCount": 12,
+    "category": "Healing"
+  },
+  {
+    "id": "prayer-2",
+    "requesterName": "John D.",
+    "requestText": "Praise God! I got the job I was interviewing for. Thank you church family for your prayers.",
+    "dateSubmitted": "2023-11-02T14:30:00Z",
+    "isAnswered": true,
+    "prayedForCount": 45,
+    "category": "Praise"
+  },
+  {
+    "id": "prayer-3",
+    "requesterName": "Sarah",
+    "requestText": "Praying for peace and comfort for our family as we grieve the loss of my uncle.",
+    "dateSubmitted": "2023-11-03T09:15:00Z",
+    "isAnswered": false,
+    "prayedForCount": 8,
+    "category": "Comfort"
+  }
+]
