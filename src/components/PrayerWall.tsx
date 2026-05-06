@@ -7,8 +7,12 @@ import prayersData from '../data/prayers.json';
 
 export default function PrayerWall() {
   const [prayers, setPrayers] = useState(prayersData);
+  const [prayedSet, setPrayedSet] = useState<Set<string>>(new Set());
+  const [showForm, setShowForm] = useState(false);
 
   const handlePray = (id: string) => {
+    if (prayedSet.has(id)) return;
+    setPrayedSet(new Set(prayedSet).add(id));
     setPrayers(current => 
       current.map(p => 
         p.id === id ? { ...p, prayedForCount: p.prayedForCount + 1 } : p
@@ -38,7 +42,7 @@ export default function PrayerWall() {
             >
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-semibold rounded-full mb-2">
+                  <span className="inline-block px-3 py-1 bg-stone-100 text-stone-800 text-xs font-semibold rounded-full mb-2">
                     {prayer.category}
                   </span>
                   <h4 className="font-semibold text-gray-900">{prayer.requesterName}</h4>
@@ -58,10 +62,15 @@ export default function PrayerWall() {
                 </span>
                 <button 
                   onClick={() => handlePray(prayer.id)}
-                  className="flex items-center gap-2 text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors bg-amber-50 px-4 py-2 rounded-lg hover:bg-amber-100"
+                  disabled={prayedSet.has(prayer.id)}
+                  className={`flex items-center gap-2 text-sm font-medium transition-colors px-4 py-2 rounded-lg ${
+                    prayedSet.has(prayer.id) 
+                      ? 'text-gray-400 bg-gray-100 cursor-not-allowed' 
+                      : 'text-stone-600 hover:text-stone-700 bg-stone-50 hover:bg-stone-100'
+                  }`}
                 >
-                  <Heart className="w-4 h-4" /> 
-                  I Prayed ({prayer.prayedForCount})
+                  <Heart className={`w-4 h-4 ${prayedSet.has(prayer.id) ? 'fill-current' : ''}`} /> 
+                  {prayedSet.has(prayer.id) ? 'Prayed' : 'I Prayed'} ({prayer.prayedForCount})
                 </button>
               </div>
             </motion.div>
@@ -69,10 +78,36 @@ export default function PrayerWall() {
         </div>
         
         <div className="mt-12 text-center">
-          <button className="px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-semibold transition-colors shadow-lg">
+          <button 
+            onClick={() => setShowForm(!showForm)}
+            className="px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-semibold transition-colors shadow-lg"
+          >
             Submit a Prayer Request
           </button>
         </div>
+        
+        {showForm && (
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-8 max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md border border-gray-200"
+          >
+            <h3 className="text-xl font-bold mb-4">New Prayer Request</h3>
+            <textarea 
+              className="w-full border border-gray-300 rounded-lg p-3 min-h-[100px] mb-4" 
+              placeholder="How can we pray for you?"
+            ></textarea>
+            <button 
+              onClick={() => {
+                alert('Prayer request submitted!');
+                setShowForm(false);
+              }}
+              className="w-full py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700"
+            >
+              Submit
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );

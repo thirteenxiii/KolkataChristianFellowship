@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const slides = [
-  { id: 1, image: '/assets/66104-Resurrection (Easter) Sunday 2021 1920x1080.jpg' },
-  { id: 2, image: '/assets/64211-Palm Sunday 2021 2b 1920x1080.jpg' },
-  { id: 3, image: '/assets/1616869766310_ToT_January_2021_Heroes_2.jpg' },
+  { id: 1, image: '/assets/easter.jpg' },
+  { id: 2, image: '/assets/palm-sunday.jpg' },
+  { id: 3, image: '/assets/heroes.jpg' },
 ];
 
 export default function HeroSlider() {
@@ -52,7 +52,7 @@ export default function HeroSlider() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 href="#services"
-                className="mt-8 px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white rounded-full font-semibold transition-colors shadow-lg inline-block"
+                className="mt-8 px-8 py-4 bg-stone-600 hover:bg-stone-700 text-white rounded-full font-semibold transition-colors shadow-lg inline-block"
               >
                 Join Us This Sunday
               </motion.a>

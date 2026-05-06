@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Lora, Great_Vibes } from "next/font/google";
+import Navbar from "../components/Navbar";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const greatVibes = Great_Vibes({
+  weight: "400",
+  variable: "--font-great-vibes",
   subsets: ["latin"],
 });
 
@@ -41,9 +43,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${lora.variable} ${greatVibes.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="font-sans min-h-full flex flex-col bg-gray-50 text-gray-900">{children}</body>
+      <body className="font-sans min-h-full flex flex-col bg-stone-50 text-stone-900">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
