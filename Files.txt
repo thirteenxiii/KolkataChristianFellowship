@@ -1,1 +1,2 @@
-http://kolkatachristianfellowship.net/index.php
+Legacy reference removed — site migrated to Next.js App Router.
+Previous URL: http://kolkatachristianfellowship.net
