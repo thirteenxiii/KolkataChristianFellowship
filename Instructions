@@ -1,0 +1,46 @@
+Website Revamp Workflow
+Phase 1: Resource Extraction & Technical Audit
+Goal: Identify all assets and find what needs fixing.
+
+Prompt:
+"You are an expert Web Architect. Your task is to perform a deep-crawl and audit of http://kolkatachristianfellowship.net/index.php.
+
+Extract Media: Scrape all logos, images, and sermon video links (e.g., the 'Second-Coming Church' series).
+2. Content Capture: Document all ministry descriptions for Sonarpur, Madhyamgram, Sulkuni, Nirmaan, and the School of Excellence.
+3. The 'Broken' Audit: Identify broken links, low-resolution images, and non-responsive PHP elements that need replacing.
+
+CRITICAL: Perform ONLY this extraction and audit. Stop and provide a summary of the extracted assets and a list of 'broken' items. Do not generate any design or code yet."
+
+Phase 2: Sitemap & WordPress Structure
+Goal: Map out the new architecture based on the existing hierarchy.
+
+Prompt:
+"Following the audit, you are now a WordPress SEO specialist. Create a complete sitemap for the KCF revamp that follows the exact existing hierarchy:
+1. Primary Pages: Home, About (History, Vision, Principles, Faith), and Church Corner (Hour of Power, Main Service, Kids Church, Teens on Track, Freedom Church, College & Career).
+2. Outreach & Engagement: Serving Communities (Sonarpur to Micro Credit) and Resource Corner (Sermons, Prayer Wall, Photos).
+3. Dynamic Logic: Design the structure for a dynamic 'Prayer Wall' and a 'Sermon Archive' that supports YouTube embeds and PDF notes.
+
+CRITICAL: Perform ONLY the structural mapping. Stop once the sitemap and page logic are finalized. Do not generate UI elements or JSON files yet."
+
+Phase 3: Modern UI/UX Design & Elementor Generation
+Goal: Create the "Church Modern" look and generate the actual page templates.
+
+Prompt:
+"Using the approved sitemap, act as a Senior Elementor Designer.
+1. Visual Style: Apply a 'Church Modern' aesthetic—high-contrast typography, warm accent colors, and ample white space.
+2. Key Elements: Create a hero image slider with the mission statement: 'Encountering the Saviour, Equipping the Saints, Encouraging Service'.
+3. Modern Features: Design masonry-style galleries for photos and card-based layouts for sermons to replace the old list format.
+4. Code Generation: Generate the design as Elementor Pro JSON templates or structured CSS/HTML blocks for the 'Home' and 'Sermons' pages.
+
+CRITICAL: Focus only on the UI/UX and JSON template generation. Stop once the templates for the main pages are ready."
+
+Phase 4: SEO, Responsiveness & Final Export
+Goal: Polish the site for mobile users and provide the final upload kit.
+
+Prompt:
+"Finalize the KCF website revamp with technical optimizations:
+1. Responsive Design: Apply a Fluid Grid system to fix the legacy 'pinch-to-zoom' issues, ensuring perfect display for Sunday service seekers on mobile.
+2. SEO & CTA: Add meta-descriptions localized to Mukundapur, Kolkata. Strategically place 'Join Us' buttons near the 9:45 AM and 11:00 AM service times.
+3. Export: Package all finalized templates into an 'Elementor Template Kit' format for manual upload.
+
+CRITICAL: This is the final phase. Once these optimizations are complete, provide the final delivery instructions."
