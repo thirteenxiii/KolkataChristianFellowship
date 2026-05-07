@@ -1,0 +1,381 @@
+{
+  "kcf_main_service": {
+    "title": "Main Service",
+    "subtitle": "Worship. Word. Walk. Work.",
+    "description": "Each week, the KCF family gathers to celebrate the Triune God and our togetherness in His body. Our services blend traditional, contemporary, and vernacular music, creating a unique worship experience that reflects the diversity of our community.",
+    "heroImage": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1600&q=80",
+    "schedule": [
+      { "day": "Sunday", "time": "9:45 AM & 11:00 AM" }
+    ],
+    "pillars": [
+      {
+        "title": "Worship",
+        "icon": "Music",
+        "description": "We blend traditional hymns, contemporary praise, and vernacular music to create a worship experience that honours God and reflects our diverse community.",
+        "points": ["Traditional and contemporary music blended", "Corporate prayer expressions encouraged", "Intimacy with the Master cultivated"]
+      },
+      {
+        "title": "Word",
+        "icon": "BookOpen",
+        "description": "The whole counsel of God is taught systematically in a manner that is relevant for today. Messages are translated into Bengali, serving the people of this great state.",
+        "points": ["Systematic biblical teaching", "Translated into Bengali", "Relevant to daily life"]
+      },
+      {
+        "title": "Walk",
+        "icon": "Users",
+        "description": "KCF is a place where all are welcome. People from across India and the world walk hand in hand, united in faith and fellowship.",
+        "points": ["Inclusive community", "Diverse congregation", "United in fellowship"]
+      },
+      {
+        "title": "Work",
+        "icon": "Heart",
+        "description": "We are a community that serves together. Each person who worships at KCF is salt and light in the places where God has placed them.",
+        "points": ["Community service focus", "Salt and light in every sphere", "Together in mission"]
+      }
+    ],
+    "aboutContent": "The family of KCF joins together each week to celebrate the Triune God and our togetherness in His body. We are committed to worship that engages the heart, teaching that transforms the mind, fellowship that builds community, and service that reaches the world. Our services are designed to be accessible, meaningful, and spiritually enriching for everyone who walks through our doors."
+  },
+  "hop": {
+    "title": "Hour of Power",
+    "subtitle": "Start Your Sunday With Prayer",
+    "description": "Every Sunday at 9:00 AM, we gather for a dedicated time of seeking the face of God. This is the heartbeat of our weekly activities — a sacred hour where we intercede for our world.",
+    "heroImage": "https://images.unsplash.com/photo-1473177104440-ffeeccd1d3e9?w=1600&q=80",
+    "schedule": [
+      { "day": "Sunday", "time": "9:00 AM" }
+    ],
+    "prayerFocus": [
+      {
+        "title": "Our Nation",
+        "icon": "Flag",
+        "description": "Praying for India — its leaders, its people, and its future.",
+        "points": ["Government and leadership", "National unity and peace", "Spiritual revival across the land"]
+      },
+      {
+        "title": "Our State",
+        "icon": "MapPin",
+        "description": "Interceding for West Bengal and its diverse communities.",
+        "points": ["State governance", "Community harmony", "Economic development"]
+      },
+      {
+        "title": "Our City",
+        "icon": "Building2",
+        "description": "Standing in the gap for Kolkata, the city of joy.",
+        "points": ["City administration", "The poor and marginalised", "Church unity in the city"]
+      },
+      {
+        "title": "Our World",
+        "icon": "Globe",
+        "description": "Lifting up global needs before the throne of grace.",
+        "points": ["Global peace", "Missionaries worldwide", "Humanitarian crises"]
+      },
+      {
+        "title": "The Church",
+        "icon": "Church",
+        "description": "Praying for churches in Kolkata and across the world.",
+        "points": ["Pastors and leaders", "Church unity", "Effective outreach"]
+      },
+      {
+        "title": "The KCF Family",
+        "icon": "Heart",
+        "description": "Covering our own fellowship in prayer.",
+        "points": ["Members and their families", "Ministries and programs", "Future direction and growth"]
+      }
+    ],
+    "aboutContent": "The Hour of Power is a cherished tradition at KCF — a time when we set aside the busyness of life to focus on prayer. We believe that prayer is not merely an activity but the very lifeline of our faith. Together, we intercede for our country, our state, our city, our world, churches everywhere, and our own KCF family. This discipline of prayer has been central to our identity from the very beginning."
+  },
+  "kids": {
+    "title": "Kids Church",
+    "subtitle": "Planting Seeds of Faith",
+    "description": "At KCF, we believe in teaching children biblical truths in a way they can understand and enjoy. Our Kids Church is a vibrant, safe, and nurturing environment for children under 13.",
+    "heroImage": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1600&q=80",
+    "schedule": [
+      { "day": "Sunday", "time": "During Main Service" }
+    ],
+    "ageGroups": [
+      {
+        "title": "Smallies",
+        "age": "Ages 0–3",
+        "color": "pink",
+        "icon": "Baby",
+        "description": "A gentle introduction to God's love through songs, stories, and caring supervision.",
+        "points": ["Nursery care with love", "Simple Bible stories", "Soft music and prayer"]
+      },
+      {
+        "title": "Beginners",
+        "age": "Ages 4–6",
+        "color": "sky",
+        "icon": "Sparkles",
+        "description": "Interactive lessons that lay the foundation for a lifelong faith journey.",
+        "points": ["Hands-on activities", "Memory verses", "Fun worship songs"]
+      },
+      {
+        "title": "Primaries",
+        "age": "Ages 7–9",
+        "color": "emerald",
+        "icon": "BookOpen",
+        "description": "Deeper exploration of Bible stories with discussions and creative projects.",
+        "points": ["Bible story exploration", "Creative projects", "Group discussions"]
+      },
+      {
+        "title": "Juniors",
+        "age": "Ages 10–12",
+        "color": "amber",
+        "icon": "Lightbulb",
+        "description": "Preparing pre-teens to understand and own their faith personally.",
+        "points": ["Biblical foundations", "Faith discussions", "Leadership opportunities"]
+      }
+    ],
+    "approachContent": "Children first join the main church for worship before leaving for their own time of enthusiastic singing and age-appropriate learning. Our curriculum is designed to be engaging, interactive, and biblically sound. We believe that investing in children today builds the church of tomorrow.",
+    "features": [
+      {
+        "title": "Biblical Foundation",
+        "icon": "Cross",
+        "description": "Every lesson is rooted in Scripture, teaching children the timeless truths of God's Word."
+      },
+      {
+        "title": "Creative Learning",
+        "icon": "Palette",
+        "description": "Through crafts, music, drama, and storytelling, children encounter faith in memorable ways."
+      },
+      {
+        "title": "Safe Environment",
+        "icon": "Shield",
+        "description": "All volunteers are vetted and trained, ensuring a secure and loving space for every child."
+      }
+    ]
+  },
+  "tot": {
+    "title": "Teens on Track",
+    "subtitle": "Don't Let Anyone Look Down on You",
+    "description": "TOT is a vibrant community where teenagers connect, grow, and discover their purpose in Christ. Meeting every 2nd and 4th Sunday, it is a place to recharge and refuel.",
+    "heroImage": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600&q=80",
+    "schedule": [
+      { "day": "2nd & 4th Sunday", "time": "During Main Service" }
+    ],
+    "scripture": {
+      "verse": "Don't let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity.",
+      "reference": "1 Timothy 4:12"
+    },
+    "features": [
+      {
+        "title": "Worship",
+        "icon": "Music",
+        "color": "purple",
+        "description": "Contemporary worship that speaks to the teenage heart and draws them into God's presence.",
+        "points": ["Modern worship music", "Student-led praise", "Heartfelt expression"]
+      },
+      {
+        "title": "Prayer",
+        "icon": "PrayingHands",
+        "color": "rose",
+        "description": "Teaching teens the power and discipline of prayer in their daily lives.",
+        "points": ["Group prayer sessions", "Prayer partners", "Learning to intercede"]
+      },
+      {
+        "title": "Bible Study",
+        "icon": "BookOpen",
+        "color": "blue",
+        "description": "Relevant, engaging Bible studies that address the real challenges teenagers face.",
+        "points": ["Topical studies", "Book studies", "Q&A discussions"]
+      },
+      {
+        "title": "Fellowship",
+        "icon": "Users",
+        "color": "emerald",
+        "description": "Building lasting friendships and a supportive community that extends beyond Sunday.",
+        "points": ["Social events", "Connect groups", "Online community"]
+      }
+    ],
+    "aboutContent": "With the demanding schedule of a high schooler — school, studies, tuition classes, and exams — TOT provides a rest from the hectic pace. Students come together for worship, prayer, Bible study, and fellowship. Through social media and connect groups, our teens and teachers stay connected throughout the week. TOT plays a vital role in the KCF family, and we invite you to come and see what the joy is about."
+  },
+  "freedom": {
+    "title": "Freedom Church",
+    "subtitle": "Hope and Healing for Survivors",
+    "description": "Freedom Church is a unique ministry that brings hope and healing to survivors of trafficking. Established in July 2015, it is a caring worshipping community for traumatised and vulnerable women.",
+    "heroImage": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1600&q=80",
+    "schedule": [
+      { "day": "Sunday", "time": "Morning Service" }
+    ],
+    "location": "Thakurpukur area, Kolkata",
+    "pillars": [
+      {
+        "title": "Hope and Healing",
+        "icon": "Heart",
+        "color": "rose",
+        "description": "Bringing the love of Christ to those who have experienced deep trauma and pain.",
+        "points": ["Trauma-informed care", "Restorative counselling", "Dignity and respect"]
+      },
+      {
+        "title": "Caring Community",
+        "icon": "Users",
+        "color": "amber",
+        "description": "Building a family where every woman feels loved, valued, and supported.",
+        "points": ["Sisterhood and support", "Safe relationships", "Community belonging"]
+      },
+      {
+        "title": "Strategic Partnership",
+        "icon": "Handshake",
+        "color": "emerald",
+        "description": "Working alongside like-minded organisations to maximise impact and reach.",
+        "points": ["Collaborative ministry", "Shared resources", "Unified mission"]
+      },
+      {
+        "title": "Safe Sanctuary",
+        "icon": "Shield",
+        "color": "blue",
+        "description": "Providing a secure space where survivors can worship, heal, and rebuild their lives.",
+        "points": ["Secure environment", "Confidential care", "Long-term support"]
+      }
+    ],
+    "aboutContent": "Over the past several years, the KCF family has had the joy of partnering alongside like-minded bodies in the city with the desire to bring hope and healing to survivors of trafficking. God opened a new door as part of His great plan, and we were able to establish Freedom Church in July 2015. This church meets in the Thakurpukur area and seeks to minister to survivors in a manner that is relevant, compassionate, and transformative."
+  },
+  "college": {
+    "title": "College and Career",
+    "subtitle": "Strengthening Faith and Friendship",
+    "description": "CnC is a dynamic community for college students and young professionals. It provides a platform to explore biblical answers to the challenges of our time.",
+    "heroImage": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1600&q=80",
+    "schedule": [
+      { "day": "Regular Meetings", "time": "Check Schedule" }
+    ],
+    "focusAreas": [
+      {
+        "title": "Biblical Exploration",
+        "icon": "BookOpen",
+        "color": "blue",
+        "description": "In-depth study of Scripture, from the Gospel of John to Hebrews and Revelation.",
+        "points": ["Verse-by-verse study", "Thematic exploration", "Book studies"]
+      },
+      {
+        "title": "Relevant Discussions",
+        "icon": "MessageSquare",
+        "color": "amber",
+        "description": "Addressing real issues — stress management, justice, truth, and ethics in a complex world.",
+        "points": ["Contemporary topics", "Open dialogue", "Biblical perspective"]
+      },
+      {
+        "title": "Community Service",
+        "icon": "Heart",
+        "color": "rose",
+        "description": "Active engagement in gospel outreaches and community service projects.",
+        "points": ["Outreach events", "Service projects", "Social impact"]
+      },
+      {
+        "title": "Faith and Friendship",
+        "icon": "Users",
+        "color": "emerald",
+        "description": "Building lasting relationships centred on shared faith and common purpose.",
+        "points": ["Connect groups", "Social gatherings", "Mentorship opportunities"]
+      }
+    ],
+    "aboutContent": "College and Career (CnC) was started with the desire of strengthening faith and friendship among the church youth. It focuses mainly on college students and young professionals, providing a platform where young adults can discuss and explore biblical answers relevant to the challenges of the present time. Over the years, we have addressed a wide array of topics ranging from the Ten Commandments to stress management, from discerning truth to euthanasia. We have also undertaken detailed book studies on the Gospel of John, Hebrews, and Revelation. The group has actively engaged in many gospel outreaches and community service projects."
+  },
+  "mentorship": {
+    "title": "Bengali Mentorship",
+    "subtitle": "Empowering Future Leaders",
+    "description": "A monthly program designed to empower and equip future Bengali leadership through practical theology and lifestyle learning.",
+    "heroImage": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1600&q=80",
+    "schedule": [
+      { "day": "First Sunday", "time": "Every Month" }
+    ],
+    "focusPoints": [
+      {
+        "title": "Practical Theology",
+        "icon": "BookOpen",
+        "color": "amber",
+        "description": "Topics chosen for discussion are intentionally focused on practical day-to-day challenges and how to address them as people of faith.",
+        "points": ["Real-world application", "Contextual teaching", "Bengali perspective"]
+      },
+      {
+        "title": "Lifestyle Learning",
+        "icon": "Compass",
+        "color": "blue",
+        "description": "Examining lives that have impacted the Bengali people, drawing principles for effective service.",
+        "points": ["Role models and mentors", "Biographical studies", "Practical principles"]
+      },
+      {
+        "title": "Leadership Development",
+        "icon": "TrendingUp",
+        "color": "emerald",
+        "description": "Equipping the next generation of Bengali leaders for ministry and community impact.",
+        "points": ["Skill building", "Character formation", "Vision casting"]
+      },
+      {
+        "title": "Cultural Relevance",
+        "icon": "Globe",
+        "color": "rose",
+        "description": "Engaging with Bengali culture and heritage while remaining rooted in biblical truth.",
+        "points": ["Cultural appreciation", "Contextual ministry", "Community engagement"]
+      }
+    ],
+    "aboutContent": "This is a monthly program specifically designed to empower and equip future Bengali leadership. We meet on the first Sunday of every month. The focus is twofold: Practical Theology — addressing day-to-day challenges through a biblical lens, and Lifestyle Learning — drawing principles from lives that have impacted the Bengali people. Our desire is to see a new generation of leaders rise up to serve this great state effectively."
+  },
+  "rajarhat": {
+    "title": "Rajarhat Fellowship",
+    "subtitle": "A Growing Community in New Town",
+    "description": "The work in Rajarhat began in February 2015, reaching the new and upcoming settlement of Kolkata with the love of Christ.",
+    "heroImage": "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=1600&q=80",
+    "schedule": [
+      { "day": "Sunday", "time": "Morning Service" }
+    ],
+    "location": "Community Hall, Rose Dale Plaza, New Town",
+    "milestones": [
+      {
+        "year": "February 2015",
+        "title": "First Meeting",
+        "description": "Initial meetings began in the homes of members from the Rajarhat area.",
+        "icon": "Home"
+      },
+      {
+        "year": "2015",
+        "title": "Novotel Hotel",
+        "description": "For the next six months, the fellowship met at the Novotel Hotel.",
+        "icon": "Building2"
+      },
+      {
+        "year": "2015–2016",
+        "title": "Pastor's Home",
+        "description": "The fellowship then gathered at Pastor Ashok Andrews' home for ten months.",
+        "icon": "Heart"
+      },
+      {
+        "year": "2016–Present",
+        "title": "Care Groups",
+        "description": "Four care groups established across New Town, meeting weekly.",
+        "icon": "Users"
+      },
+      {
+        "year": "Present",
+        "title": "Sunday Worship",
+        "description": "Regular worship services at Rose Dale Plaza with Kids Church and TOT programs.",
+        "icon": "Church"
+      }
+    ],
+    "careGroups": [
+      {
+        "location": "Eco-Village, New Town",
+        "day": "Friday",
+        "time": "7:30 PM",
+        "icon": "TreePine"
+      },
+      {
+        "location": "Bishnupur Area, New Town",
+        "day": "Saturday",
+        "time": "5:00 PM",
+        "icon": "MapPin"
+      },
+      {
+        "location": "Uniworld, New Town",
+        "day": "Saturday",
+        "time": "6:30 PM",
+        "icon": "Building2"
+      },
+      {
+        "location": "Jal Vayu Towers, New Town",
+        "day": "Saturday",
+        "time": "6:30 PM",
+        "icon": "Building2"
+      }
+    ],
+    "aboutContent": "The work in Rajarhat began keeping in view that this was a new and upcoming settlement of housing in Kolkata, and that KCF had started having families coming from this area. From humble beginnings in members' homes, the fellowship has grown into a vibrant church community meeting at Rose Dale Plaza each Sunday. We are excited that God has given us a dedicated team that runs a Kids Ministry and a Teens on Track program. The fellowship continues to grow through weekly care groups spread across four locations in New Town."
+  }
+}

@@ -13,8 +13,14 @@ const nextConfig: NextConfig = {
     ],
     // Allow YouTube thumbnails and Unsplash for hero fallbacks
     remotePatterns: [
-      new URL("https://images.unsplash.com/**"),
-      new URL("https://yt3.ggpht.com/**"),
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "yt3.ggpht.com",
+      },
     ],
     // Modern formats for better compression
     formats: ["image/avif", "image/webp"],

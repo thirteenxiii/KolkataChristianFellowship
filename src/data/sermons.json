@@ -8,7 +8,7 @@
     "youtubeUrl": "https://www.youtube.com/embed/example1",
     "pdfNotesUrl": "/assets/notes-jerusalem.pdf",
     "scriptureReference": "Acts 2:42-47",
-    "thumbnailUrl": "/assets/66104-Resurrection (Easter) Sunday 2021 1920x1080.jpg"
+    "thumbnailUrl": "/assets/easter.jpg"
   },
   {
     "id": "sermon-2",
@@ -19,7 +19,7 @@
     "youtubeUrl": "https://www.youtube.com/embed/example2",
     "pdfNotesUrl": "/assets/notes-antioch.pdf",
     "scriptureReference": "Acts 11:19-26",
-    "thumbnailUrl": "/assets/64211-Palm Sunday 2021 2b 1920x1080.jpg"
+    "thumbnailUrl": "/assets/heroes.jpg"
   },
   {
     "id": "sermon-3",
@@ -30,6 +30,6 @@
     "youtubeUrl": "https://www.youtube.com/embed/example3",
     "pdfNotesUrl": null,
     "scriptureReference": "2 Corinthians 8:1-5",
-    "thumbnailUrl": "/assets/1616869766310_ToT_January_2021_Heroes_2.jpg"
+    "thumbnailUrl": "/assets/palm-sunday.jpg"
   }
 ]
