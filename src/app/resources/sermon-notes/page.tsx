@@ -143,11 +143,11 @@ export default function SermonNotesPage() {
             {sermonNotes.map((note, i) => (
               <div
                 key={i}
-                className="reveal-on-scroll bg-white rounded-xl border border-gray-200 hover:border-kcf-blue/30 hover:shadow-lg transition-all duration-300 overflow-hidden group"
+                className="reveal-on-scroll bg-white rounded-13 border border-gray-200 hover:border-kcf-blue/30 hover:shadow-lg transition-all duration-300 overflow-hidden group"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                       <FileText className="w-5 h-5 text-kcf-blue" />
                     </div>
                     <span className="text-xs font-medium text-kcf-gold bg-kcf-gold/10 px-2.5 py-1 rounded-full">

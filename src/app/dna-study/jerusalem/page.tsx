@@ -66,7 +66,7 @@ export default function JerusalemPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           {/* Scripture */}
-          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-xl p-8 border-l-4 border-kcf-gold">
+          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-13 p-8 border-l-4 border-kcf-gold">
             <p className="text-lg text-kcf-dark italic leading-relaxed">
               "They devoted themselves to the apostles' teaching and to fellowship, to the breaking of bread and to prayer. Everyone was filled with awe at the many wonders and signs performed through the apostles."
             </p>
@@ -100,9 +100,9 @@ export default function JerusalemPage() {
                 return (
                   <div
                     key={i}
-                    className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                    className="bg-white rounded-13 border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-kcf-blue-lighter flex items-center justify-center mb-4">
+                    <div className="w-10 h-10 rounded-13 bg-kcf-blue-lighter flex items-center justify-center mb-4">
                       <Icon className="w-5 h-5 text-kcf-blue" />
                     </div>
                     <h4 className="text-lg font-bold text-kcf-dark mb-2">{item.title}</h4>
@@ -116,7 +116,7 @@ export default function JerusalemPage() {
           </div>
 
           {/* Lesson */}
-          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-xl p-8 text-white">
+          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-13 p-8 text-white">
             <h3 className="text-xl font-bold mb-3">What We Can Learn</h3>
             <p className="text-white/90 leading-relaxed">
               The Jerusalem church reminds us that the foundation of any healthy church is devotion to God's Word, fellowship with one another, prayer, and a commitment to witness. When we prioritise these things, we create a community where God's presence dwells and lives are transformed.

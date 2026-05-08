@@ -61,7 +61,7 @@ export default function AntiochPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           {/* Scripture */}
-          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-xl p-8 border-l-4 border-kcf-gold">
+          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-13 p-8 border-l-4 border-kcf-gold">
             <p className="text-lg text-kcf-dark italic leading-relaxed">
               "While they were worshiping the Lord and fasting, the Holy Spirit said, 'Set apart for me Barnabas and Saul for the work to which I have called them.' So after they had fasted and prayed, they placed their hands on them and sent them off."
             </p>
@@ -95,9 +95,9 @@ export default function AntiochPage() {
                 return (
                   <div
                     key={i}
-                    className="flex items-start gap-4 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                    className="flex items-start gap-4 bg-white rounded-13 border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-kcf-blue" />
                     </div>
                     <div>
@@ -113,7 +113,7 @@ export default function AntiochPage() {
           </div>
 
           {/* Lesson */}
-          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-xl p-8 text-white">
+          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-13 p-8 text-white">
             <h3 className="text-xl font-bold mb-3">What We Can Learn</h3>
             <p className="text-white/90 leading-relaxed">
               Antioch challenges us to be a sending church — a community that prioritises mission, supports those called to go, and rejoices in the spread of the gospel. It reminds us that the church exists not for itself but for the world God loves.

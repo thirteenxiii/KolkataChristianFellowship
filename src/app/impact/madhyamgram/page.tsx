@@ -74,7 +74,7 @@ export default function MadhyamgramPage() {
               <Calendar className="w-6 h-6 text-kcf-gold" />
               A Week at Madhyamgram
             </h3>
-            <div className="overflow-hidden rounded-xl border border-gray-200">
+            <div className="overflow-hidden rounded-13 border border-gray-200">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-kcf-blue text-white">

@@ -56,7 +56,7 @@ export default function BengaliMentorshipPage() {
               return (
                 <div
                   key={item.title}
-                  className="p-8 rounded-2xl bg-white shadow-lg border border-gray-100"
+                  className="p-8 rounded-13 bg-white shadow-lg border border-gray-100"
                 >
                   <Icon className="w-10 h-10 text-kcf-blue mb-4" />
                   <h3 className="text-xl font-bold text-kcf-dark mb-3">
@@ -68,7 +68,7 @@ export default function BengaliMentorshipPage() {
             })}
           </div>
 
-          <div className="reveal-on-scroll mt-12 p-6 rounded-xl bg-kcf-blue-lighter/50 flex items-center gap-4">
+          <div className="reveal-on-scroll mt-12 p-6 rounded-13 bg-kcf-blue-lighter/50 flex items-center gap-4">
             <Calendar className="w-6 h-6 text-kcf-blue shrink-0" />
             <p className="text-gray-700">
               <strong>Meets:</strong> First Sunday of every month

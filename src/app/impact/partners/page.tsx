@@ -56,7 +56,7 @@ export default function PartnersPage() {
             {regions.map((region) => (
               <div
                 key={region.name}
-                className="p-5 rounded-xl bg-white shadow-md border border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                className="p-5 rounded-13 bg-white shadow-md border border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
               >
                 <div className="flex items-center gap-3">
                   <Globe className="w-5 h-5 text-kcf-blue shrink-0" />

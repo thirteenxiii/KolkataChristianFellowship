@@ -51,7 +51,7 @@ export default function HistoryPage() {
               from clear. The one thing that greatly encouraged them, however,
               was that God had given them a promise to hold on to:
             </p>
-            <blockquote className="border-l-4 border-kcf-gold bg-kcf-blue-lighter/50 rounded-r-xl px-6 py-4 my-6">
+            <blockquote className="border-l-4 border-kcf-gold bg-kcf-blue-lighter/50 rounded-r-13 px-6 py-4 my-6">
               <p className="text-lg text-kcf-blue italic font-medium">
                 &ldquo;Look at the nations and watch and be utterly amazed. For I
                 am going to do something in your days that you would not believe,

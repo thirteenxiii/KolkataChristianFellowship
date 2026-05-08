@@ -2,7 +2,16 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
-import { Eye, Target, Globe } from "lucide-react";
+import {
+  Eye,
+  Target,
+  Globe,
+  PhoneCall,
+  PartyPopper,
+  Link2,
+  TrendingUp,
+  Send,
+} from "lucide-react";
 
 export default function VisionMissionPage() {
   useEffect(() => {
@@ -39,7 +48,7 @@ export default function VisionMissionPage() {
                 Our Vision
               </h2>
             </div>
-            <div className="bg-kcf-blue-lighter rounded-2xl p-8 lg:p-10">
+            <div className="bg-kcf-blue-lighter rounded-13 p-8 lg:p-10">
               <p className="text-xl lg:text-2xl font-bold text-kcf-blue mb-6">
                 To be a model church that the Father delights in for its:
               </p>
@@ -78,22 +87,22 @@ export default function VisionMissionPage() {
               exists to serve the urban community in the city of Kolkata
               through:
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                "Biblical Relationships",
-                "Neighborly Love",
-                "Evangelism",
-                "Kindness",
-                "Social Action",
-                "Reform based on Biblical Truths",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="p-5 rounded-xl bg-white shadow-md border border-gray-100"
-                >
-                  <span className="text-gray-700 font-medium">{item}</span>
-                </div>
-              ))}
+            <div className="bg-kcf-blue-lighter rounded-13 p-8 lg:p-10">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  "Biblical Relationships",
+                  "Neighborly Love",
+                  "Evangelism",
+                  "Kindness",
+                  "Social Action",
+                  "Reform based on Biblical Truths",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-kcf-gold shrink-0" />
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             <p className="text-gray-500 italic mt-6">
               While encouraging people to grow in their faith for the glory of
@@ -117,45 +126,48 @@ export default function VisionMissionPage() {
             <div className="grid sm:grid-cols-2 gap-6">
               {[
                 {
-                  letter: "C",
+                  icon: PhoneCall,
                   word: "CALL",
                   desc: "All of God's creation to experience fullness of life.",
                 },
                 {
-                  letter: "C",
+                  icon: PartyPopper,
                   word: "CELEBRATE",
                   desc: "The joy of corporate fellowship.",
                 },
                 {
-                  letter: "C",
+                  icon: Link2,
                   word: "CONNECT",
                   desc: "To one another in caring relationships.",
                 },
                 {
-                  letter: "C",
+                  icon: TrendingUp,
                   word: "COMMIT",
                   desc: "To growth and development.",
                 },
                 {
-                  letter: "C",
+                  icon: Send,
                   word: "COMMISSION",
                   desc: "Each member to serve a needy world in Truth & Love.",
                   wide: true,
                 },
-              ].map((item) => (
-                <div
-                  key={item.word}
-                  className={`p-6 rounded-xl bg-kcf-dark text-white ${
-                    item.wide ? "sm:col-span-2" : ""
-                  }`}
-                >
-                  <span className="text-3xl font-bold text-kcf-gold">
-                    {item.letter}
-                  </span>
-                  <h3 className="text-xl font-bold mt-1 mb-2">{item.word}</h3>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
-                </div>
-              ))}
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.word}
+                    className={`p-6 rounded-13 bg-kcf-dark text-white ${
+                      item.wide ? "sm:col-span-2" : ""
+                    }`}
+                  >
+                    <div className="w-10 h-10 rounded-13 bg-kcf-gold/20 flex items-center justify-center mb-3">
+                      <Icon className="w-5 h-5 text-kcf-gold" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{item.word}</h3>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -65,7 +65,7 @@ export default function HourOfPowerPage() {
                 return (
                   <div
                     key={item.title}
-                    className="p-6 rounded-xl bg-kcf-blue-lighter/50 hover:bg-kcf-blue-lighter transition-colors"
+                    className="p-6 rounded-13 bg-kcf-blue-lighter/50 hover:bg-kcf-blue-lighter transition-colors"
                   >
                     <Icon className="w-8 h-8 text-kcf-blue mb-3" />
                     <h3 className="text-lg font-bold text-kcf-dark mb-2">

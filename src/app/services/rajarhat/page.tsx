@@ -66,7 +66,7 @@ export default function RajarhatPage() {
                 </div>
               </div>
             </div>
-            <div className="reveal-on-scroll rounded-2xl overflow-hidden shadow-xl aspect-video">
+            <div className="reveal-on-scroll rounded-13 overflow-hidden shadow-xl aspect-video">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/pm_PIvFITFQ"
@@ -103,7 +103,7 @@ export default function RajarhatPage() {
                 return (
                   <div
                     key={item.title}
-                    className="p-6 rounded-xl bg-kcf-blue-lighter/50 text-center"
+                    className="p-6 rounded-13 bg-kcf-blue-lighter/50 text-center"
                   >
                     <Icon className="w-8 h-8 text-kcf-blue mx-auto mb-3" />
                     <h3 className="text-lg font-bold text-kcf-dark mb-2">

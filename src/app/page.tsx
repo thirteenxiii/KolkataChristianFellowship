@@ -112,7 +112,7 @@ export default function HomePage() {
 
             {/* Right: Video/Sermon Embed */}
             <div className="reveal-on-scroll lg:mt-0">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-kcf-blue/20 aspect-video bg-white/5 backdrop-blur-sm border border-white/10">
+              <div className="relative rounded-13 overflow-hidden shadow-2xl shadow-kcf-blue/20 aspect-video bg-white/5 backdrop-blur-sm border border-white/10">
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/pm_PIvFITFQ"
@@ -148,8 +148,8 @@ export default function HomePage() {
               </p>
 
               <div className="space-y-5">
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-kcf-blue-lighter/50">
-                  <div className="w-12 h-12 rounded-lg bg-kcf-blue flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-4 rounded-13 bg-kcf-blue-lighter/50">
+                  <div className="w-12 h-12 rounded-13 bg-kcf-blue flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -161,8 +161,8 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-kcf-blue-lighter/50">
-                  <div className="w-12 h-12 rounded-lg bg-kcf-blue flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-4 rounded-13 bg-kcf-blue-lighter/50">
+                  <div className="w-12 h-12 rounded-13 bg-kcf-blue flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -178,7 +178,7 @@ export default function HomePage() {
             </div>
 
             {/* Map placeholder */}
-            <div className="reveal-on-scroll rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200">
+            <div className="reveal-on-scroll rounded-13 overflow-hidden shadow-xl aspect-[4/3] bg-gray-200">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.123456789!2d88.394!3d22.498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDI5JzUyLjgiTiA4OMKwMjMnMzguNCJF!5e0!3m2!1sen!2sin!4v1"
                 width="100%"
@@ -256,7 +256,7 @@ export default function HomePage() {
               <Link
                 key={i}
                 href={card.href}
-                className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 reveal-on-scroll"
+                className="group rounded-13 overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 reveal-on-scroll"
               >
                 <div className="aspect-[16/10] overflow-hidden">
                   <div
@@ -282,30 +282,30 @@ export default function HomePage() {
       </section>
 
       {/* ===== SCROLLING TICKER ===== */}
-      <section className="bg-kcf-blue py-6 overflow-hidden">
-        <div className="ticker-animate flex whitespace-nowrap">
-          <span className="text-white/90 text-lg lg:text-xl font-bold tracking-wider mx-8 flex items-center gap-8">
-            <span className="text-kcf-gold">✦</span>
+      <section className="bg-kcf-blue py-3 overflow-hidden">
+        <div className="ticker-animate whitespace-nowrap">
+          <span className="text-white/90 text-sm lg:text-base font-bold tracking-wider mx-6 flex items-center gap-6">
+            <span className="text-kcf-gold">✝</span>
             YOU ARE LOVED
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             YOU BELONG HERE
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             SUNDAY 9:45 AM & 11:00 AM
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             MUKUNDAPUR, KOLKATA
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             ENCOUNTERING · EQUIPPING · ENCOURAGING
           </span>
-          <span className="text-white/90 text-lg lg:text-xl font-bold tracking-wider mx-8 flex items-center gap-8">
-            <span className="text-kcf-gold">✦</span>
+          <span className="text-white/90 text-sm lg:text-base font-bold tracking-wider mx-6 flex items-center gap-6">
+            <span className="text-kcf-gold">✝</span>
             YOU ARE LOVED
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             YOU BELONG HERE
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             SUNDAY 9:45 AM & 11:00 AM
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             MUKUNDAPUR, KOLKATA
-            <span className="text-kcf-gold">✦</span>
+            <span className="text-kcf-gold">✝</span>
             ENCOUNTERING · EQUIPPING · ENCOURAGING
           </span>
         </div>
@@ -391,7 +391,7 @@ export default function HomePage() {
                 <Link
                   key={i}
                   href={item.href}
-                  className={`${item.color} rounded-2xl p-6 lg:p-8 min-h-[200px] flex flex-col justify-end group cursor-pointer hover:scale-[1.02] transition-transform duration-300 reveal-on-scroll`}
+                  className={`${item.color} rounded-13 p-6 lg:p-8 min-h-[200px] flex flex-col justify-end group cursor-pointer hover:scale-[1.02] transition-transform duration-300 reveal-on-scroll`}
                 >
                   <Icon className="w-8 h-8 text-white/80 mb-3" />
                   <h3 className="text-xl font-bold text-white mb-1.5 group-hover:underline">
@@ -475,7 +475,7 @@ export default function HomePage() {
                   <Link
                     key={item.title}
                     href={item.href}
-                    className="flex items-center justify-between p-4 rounded-xl bg-gray-50 hover:bg-kcf-blue-lighter transition-colors group"
+                    className="flex items-center justify-between p-4 rounded-13 bg-gray-50 hover:bg-kcf-blue-lighter transition-colors group"
                   >
                     <div>
                       <h4 className="font-semibold text-kcf-dark group-hover:text-kcf-blue transition-colors">
@@ -490,7 +490,7 @@ export default function HomePage() {
             </div>
 
             <div className="reveal-on-scroll">
-              <div className="bg-kcf-dark rounded-3xl p-8 lg:p-12">
+              <div className="bg-kcf-dark rounded-13 p-8 lg:p-12">
                 <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                   Our Partners in Mission
                 </h3>
@@ -546,25 +546,86 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {[
-              { name: "Jerusalem", tagline: "A Church that set STANDARDS", href: "/dna-study/jerusalem" },
-              { name: "Antioch", tagline: "A SENDING Church", href: "/dna-study/antioch" },
-              { name: "Macedonia", tagline: "A SHARING Church", href: "/dna-study/macedonia" },
-              { name: "Philippi", tagline: "A SUPPORTING Church", href: "/dna-study/philippi" },
-              { name: "Berea", tagline: "A STUDYING Church", href: "/dna-study/berea" },
-              { name: "Thessalonica", tagline: "The SECOND-COMING Church", href: "/dna-study/thessalonica" },
+              {
+                name: "Jerusalem",
+                tagline: "A Church that set STANDARDS",
+                excerpt: "The first Christian church, born on Pentecost — a community marked by devotion, unity, and the power of the Holy Spirit.",
+                verse: "Acts 2:42-43",
+                href: "/dna-study/jerusalem",
+              },
+              {
+                name: "Antioch",
+                tagline: "A SENDING Church",
+                excerpt: "Where believers were first called 'Christians' and the first missionary journey was launched to the world.",
+                verse: "Acts 13:2-3",
+                href: "/dna-study/antioch",
+              },
+              {
+                name: "Macedonia",
+                tagline: "A SHARING Church",
+                excerpt: "A generous church that gave beyond its means, supporting Paul's ministry and fellow believers in need.",
+                verse: "2 Corinthians 8:1-5",
+                href: "/dna-study/macedonia",
+              },
+              {
+                name: "Philippi",
+                tagline: "A SUPPORTING Church",
+                excerpt: "A faithful partner in the gospel, consistently supporting Paul's missionary work with generosity and love.",
+                verse: "Philippians 1:3-5",
+                href: "/dna-study/philippi",
+              },
+              {
+                name: "Berea",
+                tagline: "A STUDYING Church",
+                excerpt: "Noble-minded believers who examined the Scriptures daily to verify the truth of what they heard.",
+                verse: "Acts 17:10-11",
+                href: "/dna-study/berea",
+              },
+              {
+                name: "Thessalonica",
+                tagline: "The SECOND-COMING Church",
+                excerpt: "A young church with a strong hope in Christ's return, commended for their faith, love, and endurance.",
+                verse: "1 Thessalonians 1:2-3",
+                href: "/dna-study/thessalonica",
+              },
             ].map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 reveal-on-scroll"
+                className="group bg-white rounded-13 overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1 reveal-on-scroll cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-full bg-kcf-blue flex items-center justify-center text-white font-bold text-sm mb-4">
-                  {item.name[0]}
+                {/* Image */}
+                <div className="relative h-40 overflow-hidden bg-kcf-blue">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                  <div className="w-full h-full bg-gradient-to-br from-kcf-blue to-kcf-blue-light flex items-center justify-center">
+                    <span className="text-white/20 text-8xl font-black select-none">
+                      {item.name[0]}
+                    </span>
+                  </div>
+                  {/* Tag */}
+                  <span className="absolute top-3 left-3 z-20 bg-kcf-gold text-kcf-dark text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                    {item.tagline}
+                  </span>
+                  {/* Arrow indicator */}
+                  <span className="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white transition-transform group-hover:scale-110 group-hover:bg-kcf-gold group-hover:text-kcf-dark">
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
                 </div>
-                <h3 className="text-lg font-bold text-kcf-dark group-hover:text-kcf-blue transition-colors mb-1">
-                  {item.name}
-                </h3>
-                <p className="text-sm text-gray-600">{item.tagline}</p>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-kcf-dark group-hover:text-kcf-blue transition-colors mb-2">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2">
+                    {item.excerpt}
+                  </p>
+                  {/* Bible verse */}
+                  <div className="flex items-center gap-1.5 text-xs text-kcf-blue font-medium">
+                    <BookOpen className="w-3.5 h-3.5" />
+                    {item.verse}
+                  </div>
+                </div>
               </Link>
             ))}
           </div>

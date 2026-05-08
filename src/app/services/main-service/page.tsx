@@ -78,7 +78,7 @@ export default function MainServicePage() {
                 </div>
               </div>
             </div>
-            <div className="reveal-on-scroll rounded-2xl overflow-hidden shadow-xl aspect-video bg-gray-100">
+            <div className="reveal-on-scroll rounded-13 overflow-hidden shadow-xl aspect-video bg-gray-100">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/pm_PIvFITFQ"
@@ -100,7 +100,7 @@ export default function MainServicePage() {
                 return (
                   <div
                     key={pillar.title}
-                    className="p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                    className="p-8 rounded-13 bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
                   >
                     <Icon className="w-10 h-10 text-kcf-blue mb-4" />
                     <h3 className="text-xl font-bold text-kcf-dark mb-3">

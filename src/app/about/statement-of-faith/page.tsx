@@ -86,9 +86,9 @@ export default function StatementOfFaithPage() {
               return (
                 <div
                   key={item.title}
-                  className="reveal-on-scroll flex gap-6 p-6 lg:p-8 rounded-2xl bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                  className="reveal-on-scroll flex gap-6 p-6 lg:p-8 rounded-13 bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                  <div className="w-14 h-14 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                     <Icon className="w-7 h-7 text-kcf-blue" />
                   </div>
                   <div>

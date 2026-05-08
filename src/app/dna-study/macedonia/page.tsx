@@ -61,7 +61,7 @@ export default function MacedoniaPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           {/* Scripture */}
-          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-xl p-8 border-l-4 border-kcf-gold">
+          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-13 p-8 border-l-4 border-kcf-gold">
             <p className="text-lg text-kcf-dark italic leading-relaxed">
               "In the midst of a very severe trial, their overflowing joy and their extreme poverty welled up in rich generosity. For I testify that they gave as much as they were able, and even beyond their ability. Entirely on their own, they urgently pleaded with us for the privilege of sharing in this service to the Lord's people."
             </p>
@@ -95,9 +95,9 @@ export default function MacedoniaPage() {
                 return (
                   <div
                     key={i}
-                    className="flex items-start gap-4 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                    className="flex items-start gap-4 bg-white rounded-13 border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-kcf-blue" />
                     </div>
                     <div>
@@ -113,7 +113,7 @@ export default function MacedoniaPage() {
           </div>
 
           {/* Lesson */}
-          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-xl p-8 text-white">
+          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-13 p-8 text-white">
             <h3 className="text-xl font-bold mb-3">What We Can Learn</h3>
             <p className="text-white/90 leading-relaxed">
               The Macedonian churches teach us that true generosity flows from a heart transformed by the gospel. When we experience God's grace deeply, we give joyfully — not out of obligation, but out of the desire to share the blessings we have received.

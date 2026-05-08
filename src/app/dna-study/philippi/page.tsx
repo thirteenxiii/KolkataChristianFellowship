@@ -61,7 +61,7 @@ export default function PhilippiPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           {/* Scripture */}
-          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-xl p-8 border-l-4 border-kcf-gold">
+          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-13 p-8 border-l-4 border-kcf-gold">
             <p className="text-lg text-kcf-dark italic leading-relaxed">
               "I thank my God every time I remember you. In all my prayers for all of you, I always pray with joy because of your partnership in the gospel from the first day until now, being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus."
             </p>
@@ -95,9 +95,9 @@ export default function PhilippiPage() {
                 return (
                   <div
                     key={i}
-                    className="flex items-start gap-4 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                    className="flex items-start gap-4 bg-white rounded-13 border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-kcf-blue" />
                     </div>
                     <div>
@@ -113,7 +113,7 @@ export default function PhilippiPage() {
           </div>
 
           {/* Lesson */}
-          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-xl p-8 text-white">
+          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-13 p-8 text-white">
             <h3 className="text-xl font-bold mb-3">What We Can Learn</h3>
             <p className="text-white/90 leading-relaxed">
               The Philippian church teaches us the joy of partnership in the gospel. When we support those who are on the front lines of ministry — through prayer, encouragement, and financial giving — we become partners in their work and share in their eternal reward.

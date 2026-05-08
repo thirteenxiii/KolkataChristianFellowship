@@ -51,7 +51,7 @@ export default function SchoolOfExcellencePage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10 reveal-on-scroll mb-16">
-            <div className="p-8 rounded-2xl bg-blue-50">
+            <div className="p-8 rounded-13 bg-blue-50">
               <BookOpen className="w-8 h-8 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold text-kcf-dark mb-4">
                 Non-Formal Education
@@ -66,7 +66,7 @@ export default function SchoolOfExcellencePage() {
               </ul>
             </div>
 
-            <div className="p-8 rounded-2xl bg-amber-50">
+            <div className="p-8 rounded-13 bg-amber-50">
               <Monitor className="w-8 h-8 text-amber-600 mb-4" />
               <h3 className="text-xl font-bold text-kcf-dark mb-4">
                 Vocational Training
@@ -82,7 +82,7 @@ export default function SchoolOfExcellencePage() {
             </div>
           </div>
 
-          <div className="reveal-on-scroll p-8 rounded-2xl bg-kcf-blue-lighter">
+          <div className="reveal-on-scroll p-8 rounded-13 bg-kcf-blue-lighter">
             <Heart className="w-8 h-8 text-kcf-blue mb-4" />
             <h3 className="text-xl font-bold text-kcf-dark mb-3">
               Story of a Braveheart

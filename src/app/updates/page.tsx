@@ -123,10 +123,10 @@ export default function UpdatesPage() {
             {serviceTimes.map((day, i) => (
               <div
                 key={i}
-                className="reveal-on-scroll bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                className="reveal-on-scroll bg-white rounded-13 p-6 shadow-sm border border-gray-100"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-kcf-blue-lighter flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-13 bg-kcf-blue-lighter flex items-center justify-center">
                     <Calendar className="w-5 h-5 text-kcf-blue" />
                   </div>
                   <h3 className="text-lg font-bold text-kcf-dark">{day.day}</h3>
@@ -167,7 +167,7 @@ export default function UpdatesPage() {
             {updates.map((update, i) => (
               <div
                 key={i}
-                className="reveal-on-scroll bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                className="reveal-on-scroll bg-white rounded-13 border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">

@@ -55,7 +55,7 @@ export default function NirmaanPage() {
             {components.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="p-6 rounded-xl bg-white shadow-md border border-gray-100">
+                <div key={item.title} className="p-6 rounded-13 bg-white shadow-md border border-gray-100">
                   <Icon className="w-8 h-8 text-kcf-blue mb-3" />
                   <h3 className="text-lg font-bold text-kcf-dark mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600">{item.desc}</p>

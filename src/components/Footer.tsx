@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock, ExternalLink, TvMinimalPlay } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -31,24 +30,22 @@ export default function Footer() {
     <footer className="bg-kcf-dark text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 lg:px-6 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4 group cursor-pointer">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/20 transition-transform group-hover:scale-105">
-                <Image
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-white shadow-lg shadow-black/20 shrink-0">
+                <img
                   src="/assets/kcficon.png"
                   alt="KCF"
-                  fill
-                  sizes="48px"
-                  className="object-cover"
+                  className="w-full h-full object-contain p-1.5"
                 />
               </div>
               <div>
-                <h3 className="text-lg font-bold leading-tight">
+                <h3 className="text-base font-bold leading-tight">
                   Kolkata Christian Fellowship
                 </h3>
-                <p className="text-xs text-gray-400 tracking-wider uppercase mt-0.5">
+                <p className="text-[10px] text-gray-400 tracking-wider uppercase mt-0.5">
                   Encountering · Equipping · Encouraging
                 </p>
               </div>
@@ -63,16 +60,16 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-13 bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@KolkataChristianFellowship"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-13 bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-red-600 flex items-center justify-center transition-colors"
                 aria-label="YouTube"
               >
                 <YouTubeIcon className="w-4 h-4" />
@@ -81,16 +78,35 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-13 bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
               </a>
             </div>
+
+            {/* Attend Online button */}
+            <a
+              href="https://www.youtube.com/@KolkataChristianFellowship"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-3 rounded-full text-sm transition-all hover:scale-105 shadow-lg shadow-red-600/30 relative overflow-hidden group"
+            >
+              {/* Glow effect */}
+              <span className="absolute inset-0 bg-red-500 animate-pulse opacity-20 group-hover:opacity-30" />
+              <span className="relative flex items-center gap-2">
+                <span className="relative">
+                  <TvMinimalPlay className="w-4 h-4" />
+                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-ping opacity-75" />
+                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full" />
+                </span>
+                Attend Online — Watch Live
+              </span>
+            </a>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="lg:col-span-1">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-5 text-kcf-gold">
               Quick Links
             </h4>
@@ -106,10 +122,11 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group cursor-pointer"
+                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-kcf-gold opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
+                    <ExternalLink className="w-3 h-3 opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -117,7 +134,7 @@ export default function Footer() {
           </div>
 
           {/* Our Impact */}
-          <div>
+          <div className="lg:col-span-1">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-5 text-kcf-gold">
               Our Impact
             </h4>
@@ -133,7 +150,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group cursor-pointer"
+                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-kcf-gold opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
@@ -143,8 +160,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & CTA */}
-          <div>
+          {/* Contact */}
+          <div className="lg:col-span-1">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-5 text-kcf-gold">
               Contact
             </h4>
@@ -167,23 +184,12 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-kcf-gold shrink-0" />
                 <a
                   href="mailto:kcf@kolkatachristianfellowship.net"
-                  className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
                   kcf@kolkatachristianfellowship.net
                 </a>
               </li>
             </ul>
-
-            {/* Attend Online CTA */}
-            <a
-              href="/resources/videos"
-              className="mt-6 inline-flex items-center gap-2.5 px-5 py-3 rounded-13 bg-red-600 hover:bg-red-700 transition-colors text-white text-sm font-semibold shadow-lg shadow-red-600/25 cursor-pointer"
-            >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-              Attend Online
-            </a>
           </div>
         </div>
       </div>
@@ -195,10 +201,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Kolkata Christian Fellowship. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="/about/statement-of-faith" className="hover:text-white transition-colors cursor-pointer">
+            <Link href="/about/statement-of-faith" className="hover:text-white transition-colors">
               Statement of Faith
             </Link>
-            <Link href="/contact" className="hover:text-white transition-colors cursor-pointer">
+            <Link href="/contact" className="hover:text-white transition-colors">
               Contact Us
             </Link>
           </div>

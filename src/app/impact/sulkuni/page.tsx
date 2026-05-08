@@ -42,7 +42,7 @@ export default function SulkuniPage() {
           </div>
 
           <div className="space-y-10 mb-16">
-            <div className="reveal-on-scroll p-8 rounded-2xl bg-rose-50">
+            <div className="reveal-on-scroll p-8 rounded-13 bg-rose-50">
               <div className="flex items-center gap-3 mb-4">
                 <Heart className="w-6 h-6 text-rose-600" />
                 <h3 className="text-xl font-bold text-kcf-dark">
@@ -65,7 +65,7 @@ export default function SulkuniPage() {
               </p>
             </div>
 
-            <div className="reveal-on-scroll p-8 rounded-2xl bg-blue-50">
+            <div className="reveal-on-scroll p-8 rounded-13 bg-blue-50">
               <div className="flex items-center gap-3 mb-4">
                 <Stethoscope className="w-6 h-6 text-blue-600" />
                 <h3 className="text-xl font-bold text-kcf-dark">
@@ -82,7 +82,7 @@ export default function SulkuniPage() {
             </div>
           </div>
 
-          <div className="reveal-on-scroll p-8 rounded-2xl bg-kcf-dark text-white">
+          <div className="reveal-on-scroll p-8 rounded-13 bg-kcf-dark text-white">
             <Home className="w-8 h-8 text-kcf-gold mb-4" />
             <h3 className="text-2xl font-bold mb-3">Community Center</h3>
             <p className="text-gray-300 leading-relaxed">

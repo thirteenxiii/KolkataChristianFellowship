@@ -61,7 +61,7 @@ export default function ThessalonicaPage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           {/* Scripture */}
-          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-xl p-8 border-l-4 border-kcf-gold">
+          <div className="reveal-on-scroll mb-16 bg-kcf-blue-lighter/50 rounded-13 p-8 border-l-4 border-kcf-gold">
             <p className="text-lg text-kcf-dark italic leading-relaxed">
               "We also thank God continually because, when you received the word of God, which you heard from us, you accepted it not as a human word, but as it actually is, the word of God, which is indeed at work in you who believe. You became imitators of us and of the Lord, for you welcomed the message in the midst of severe suffering with the joy given by the Holy Spirit."
             </p>
@@ -95,9 +95,9 @@ export default function ThessalonicaPage() {
                 return (
                   <div
                     key={i}
-                    className="flex items-start gap-4 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                    className="flex items-start gap-4 bg-white rounded-13 border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-kcf-blue" />
                     </div>
                     <div>
@@ -113,7 +113,7 @@ export default function ThessalonicaPage() {
           </div>
 
           {/* Lesson */}
-          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-xl p-8 text-white">
+          <div className="reveal-on-scroll bg-gradient-to-r from-kcf-blue to-kcf-blue-light rounded-13 p-8 text-white">
             <h3 className="text-xl font-bold mb-3">What We Can Learn</h3>
             <p className="text-white/90 leading-relaxed">
               The Thessalonian church teaches us that suffering and joy are not opposites in the Christian life. When we receive God's Word as it truly is — not human words but the Word of God — it works in us and gives us joy that transcends our circumstances. Our hope in Christ's return sustains us through every trial.

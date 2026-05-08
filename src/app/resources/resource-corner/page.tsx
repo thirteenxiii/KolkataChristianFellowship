@@ -115,10 +115,10 @@ export default function ResourceCornerPage() {
               {pdfResources.map((resource, i) => (
                 <div
                   key={i}
-                  className="reveal-on-scroll bg-white rounded-xl border border-gray-200 hover:border-kcf-blue/30 hover:shadow-lg transition-all duration-300 overflow-hidden group"
+                  className="reveal-on-scroll bg-white rounded-13 border border-gray-200 hover:border-kcf-blue/30 hover:shadow-lg transition-all duration-300 overflow-hidden group"
                 >
                   <div className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-13 bg-red-50 flex items-center justify-center mb-4">
                       <FileText className="w-6 h-6 text-red-500" />
                     </div>
                     <h3 className="text-base font-bold text-kcf-dark mb-3 group-hover:text-kcf-blue transition-colors line-clamp-2">
@@ -150,7 +150,7 @@ export default function ResourceCornerPage() {
                 {imageResources.map((resource, i) => (
                   <div
                     key={i}
-                    className="reveal-on-scroll group rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300"
+                    className="reveal-on-scroll group rounded-13 overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300"
                   >
                     <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
                       <img

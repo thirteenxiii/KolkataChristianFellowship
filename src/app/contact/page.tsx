@@ -63,7 +63,7 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="reveal-on-scroll flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-kcf-blue" />
                   </div>
                   <div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="reveal-on-scroll flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-kcf-blue" />
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="reveal-on-scroll flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 text-kcf-blue" />
                   </div>
                   <div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="reveal-on-scroll flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-kcf-blue-lighter flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-13 bg-kcf-blue-lighter flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5 text-kcf-blue" />
                   </div>
                   <div>
@@ -128,7 +128,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map */}
-              <div className="reveal-on-scroll mt-10 rounded-xl overflow-hidden border border-gray-200 h-64">
+              <div className="reveal-on-scroll mt-10 rounded-13 overflow-hidden border border-gray-200 h-64">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5!2d88.4!3d22.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDMwJzAwLjAiTiA4OMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
                   width="100%"
@@ -145,7 +145,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="reveal-on-scroll">
               {submitted ? (
-                <div className="bg-green-50 rounded-xl p-8 text-center">
+                <div className="bg-green-50 rounded-13 p-8 text-center">
                   <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
                     <Send className="w-8 h-8 text-green-600" />
                   </div>
@@ -164,7 +164,7 @@ export default function ContactPage() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="bg-gray-50 rounded-xl p-8">
+                <form onSubmit={handleSubmit} className="bg-gray-50 rounded-13 p-8">
                   <h3 className="text-xl font-bold text-kcf-dark mb-6">Send Us a Message</h3>
                   <div className="space-y-4">
                     <div>
@@ -178,7 +178,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-13 border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all"
                         placeholder="Your name"
                       />
                     </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-13 border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, subject: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-13 border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all"
                         placeholder="How can we help?"
                       />
                     </div>
@@ -223,13 +223,13 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-13 border border-gray-200 focus:border-kcf-blue focus:ring-2 focus:ring-kcf-blue/20 outline-none transition-all resize-none"
                         placeholder="Your message..."
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-kcf-blue hover:bg-kcf-blue-light text-white font-semibold py-3.5 rounded-lg transition-all shadow-lg shadow-kcf-blue/25 flex items-center justify-center gap-2"
+                      className="w-full bg-kcf-blue hover:bg-kcf-blue-light text-white font-semibold py-3.5 rounded-13 transition-all shadow-lg shadow-kcf-blue/25 flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       Send Message

@@ -98,7 +98,7 @@ export default function VideosPage() {
           {/* Video Player */}
           {activeVideo && (
             <div className="reveal-on-scroll mb-12">
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-black shadow-2xl">
+              <div className="relative aspect-video rounded-13 overflow-hidden bg-black shadow-2xl">
                 <iframe
                   src={activeVideo}
                   title="KCF Video"
@@ -121,7 +121,7 @@ export default function VideosPage() {
                     setActivePart(0);
                     setActiveVideo(null);
                   }}
-                  className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                  className={`px-5 py-2.5 rounded-13 text-sm font-medium transition-all ${
                     activeSeries === i
                       ? "bg-kcf-blue text-white shadow-lg shadow-kcf-blue/25"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -144,7 +144,7 @@ export default function VideosPage() {
                   setActivePart(i);
                 }}
               >
-                <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-900 mb-3">
+                <div className="relative aspect-video rounded-13 overflow-hidden bg-gray-900 mb-3">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-kcf-gold/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Play className="w-6 h-6 text-white ml-0.5" />
@@ -178,7 +178,7 @@ export default function VideosPage() {
                   setActivePart(prev);
                   setActiveVideo(getYouTubeEmbedUrl(currentSeries.parts[prev].url));
                 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-sm font-medium"
+                className="flex items-center gap-2 px-4 py-2 rounded-13 bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-sm font-medium"
               >
                 <ChevronLeft className="w-4 h-4" />
                 Previous
@@ -192,7 +192,7 @@ export default function VideosPage() {
                   setActivePart(next);
                   setActiveVideo(getYouTubeEmbedUrl(currentSeries.parts[next].url));
                 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-sm font-medium"
+                className="flex items-center gap-2 px-4 py-2 rounded-13 bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors text-sm font-medium"
               >
                 Next
                 <ChevronRight className="w-4 h-4" />
@@ -206,7 +206,7 @@ export default function VideosPage() {
               href="https://www.youtube.com/channel/UCarY3HkQ3_xWbVFJPIOVi3Q"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-red-600/25"
+              className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-13 font-semibold transition-all shadow-lg shadow-red-600/25"
             >
               <YoutubeIcon className="w-6 h-6" />
               Visit Our YouTube Channel

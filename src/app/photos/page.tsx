@@ -120,7 +120,7 @@ export default function PhotosPage() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`whitespace-nowrap px-4 py-2 rounded-13 text-sm font-medium transition-all ${
                     activeCategory === cat
                       ? "bg-kcf-blue text-white shadow-lg shadow-kcf-blue/25"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -137,7 +137,7 @@ export default function PhotosPage() {
             {filteredImages.map((img, i) => (
               <div
                 key={i}
-                className="reveal-on-scroll group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 cursor-pointer"
+                className="reveal-on-scroll group relative aspect-[4/3] rounded-13 overflow-hidden bg-gray-100 cursor-pointer"
                 onClick={() => openLightbox(i)}
               >
                 <img
@@ -210,7 +210,7 @@ export default function PhotosPage() {
             <img
               src={filteredImages[lightboxIndex].src}
               alt={filteredImages[lightboxIndex].alt}
-              className="w-full h-full object-contain rounded-lg"
+              className="w-full h-full object-contain rounded-13"
               onError={(e) => {
                 (e.target as HTMLImageElement).src =
                   "https://placehold.co/1200x800/e8f0fe/1a3a6b?text=KCF+Photo";

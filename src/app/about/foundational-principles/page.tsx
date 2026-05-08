@@ -64,33 +64,40 @@ export default function FoundationalPrinciplesPage() {
 
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
-          {/* Three Pillars */}
+          {/* Three Pillars — Stacked Cards */}
           <div className="reveal-on-scroll mb-20">
             <h2 className="text-3xl lg:text-4xl font-bold text-kcf-dark mb-8 text-center">
               Our Threefold Commitment
             </h2>
 
-            <div className="space-y-4 max-w-lg mx-auto">
-              {commitments.map((item) => {
+            <div className="relative flex flex-col items-center pb-24 lg:pb-28">
+              {commitments.map((item, index) => {
                 const Icon = item.icon;
+                const zIndex = commitments.length - index;
+                const offsetY = index * 56;
                 return (
                   <div
                     key={item.title}
-                    className={`rounded-13 border ${item.borderColor} ${item.bgColor} shadow-md ${item.shadowColor} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                    className="w-full max-w-lg"
+                    style={{ zIndex, marginTop: index === 0 ? 0 : `-${offsetY}px` }}
                   >
-                    <div className="flex items-center gap-4 px-5 py-4">
-                      <div
-                        className={`w-11 h-11 rounded-13 ${item.iconBg} border ${item.borderColor} flex items-center justify-center shrink-0`}
-                      >
-                        <Icon className={`w-5 h-5 ${item.iconColor}`} />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-base font-bold text-kcf-dark">
-                          {item.title}
-                        </h3>
-                        <p className="text-sm text-gray-500 leading-relaxed mt-1">
-                          {item.desc}
-                        </p>
+                    <div
+                      className={`relative rounded-13 border ${item.borderColor} ${item.bgColor} shadow-lg ${item.shadowColor} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                    >
+                      <div className="flex items-center gap-4 px-5 py-4">
+                        <div
+                          className={`w-11 h-11 rounded-13 ${item.iconBg} border ${item.borderColor} flex items-center justify-center shrink-0`}
+                        >
+                          <Icon className={`w-5 h-5 ${item.iconColor}`} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-base font-bold text-kcf-dark">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm text-gray-500 leading-relaxed mt-1 line-clamp-2">
+                            {item.desc}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

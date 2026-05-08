@@ -58,10 +58,10 @@ export default function KidsChurchPage() {
                 return (
                   <div
                     key={group.name}
-                    className="p-6 rounded-2xl bg-white shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
+                    className="p-6 rounded-13 bg-white shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
                   >
                     <div
-                      className={`w-14 h-14 rounded-xl ${group.color} flex items-center justify-center mx-auto mb-4`}
+                      className={`w-14 h-14 rounded-13 ${group.color} flex items-center justify-center mx-auto mb-4`}
                     >
                       <Icon className="w-7 h-7" />
                     </div>

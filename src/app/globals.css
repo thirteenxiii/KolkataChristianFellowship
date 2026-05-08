@@ -8,6 +8,7 @@
   --color-kcf-dark: #111111;
   --color-kcf-muted: #666666;
   --color-kcf-card: #f4f4f4;
+  --radius-13: 0.8125rem;
 }
 
 @layer base {
@@ -42,14 +43,25 @@
 
 /* Ticker animation */
 @keyframes ticker-move {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 .ticker-animate {
-  animation: ticker-move 25s linear infinite;
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  animation: ticker-move 15s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
 }
 .ticker-animate:hover {
   animation-play-state: paused;
+}
+.ticker-animate > * {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Custom scrollbar */
