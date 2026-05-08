@@ -18,6 +18,39 @@ export default function FoundationalPrinciplesPage() {
     return () => observer.disconnect();
   }, []);
 
+  const commitments = [
+    {
+      title: "Encounter the Saviour",
+      desc: "KCF desires that all men encounter the Saviour through worship, prayer, and the Word.",
+      icon: Heart,
+      bgColor: "bg-rose-50",
+      iconBg: "bg-rose-100",
+      iconColor: "text-rose-600",
+      borderColor: "border-rose-200",
+      shadowColor: "shadow-rose-200/50",
+    },
+    {
+      title: "Equip the Saints",
+      desc: "KCF is committed to equip the saints for the work of ministry through systematic teaching and discipleship.",
+      icon: BookOpen,
+      bgColor: "bg-blue-50",
+      iconBg: "bg-blue-100",
+      iconColor: "text-blue-600",
+      borderColor: "border-blue-200",
+      shadowColor: "shadow-blue-200/50",
+    },
+    {
+      title: "Encourage Service",
+      desc: "KCF is focused on encouraging service, motivating every member to be salt and light in their sphere of influence.",
+      icon: Shield,
+      bgColor: "bg-amber-50",
+      iconBg: "bg-amber-100",
+      iconColor: "text-amber-600",
+      borderColor: "border-amber-200",
+      shadowColor: "shadow-amber-200/50",
+    },
+  ];
+
   return (
     <div>
       <PageHeader
@@ -36,43 +69,30 @@ export default function FoundationalPrinciplesPage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-kcf-dark mb-8 text-center">
               Our Threefold Commitment
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Encounter the Saviour",
-                  desc: "KCF desires that all men encounter the Saviour through worship, prayer, and the Word.",
-                  icon: Heart,
-                  color: "bg-rose-50",
-                  iconColor: "text-rose-600",
-                },
-                {
-                  title: "Equip the Saints",
-                  desc: "KCF is committed to equip the saints for the work of ministry through systematic teaching and discipleship.",
-                  icon: BookOpen,
-                  color: "bg-blue-50",
-                  iconColor: "text-blue-600",
-                },
-                {
-                  title: "Encourage Service",
-                  desc: "KCF is focused on encouraging service, motivating every member to be salt and light in their sphere of influence.",
-                  icon: Shield,
-                  color: "bg-amber-50",
-                  iconColor: "text-amber-600",
-                },
-              ].map((item) => {
+
+            <div className="space-y-4 max-w-lg mx-auto">
+              {commitments.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={item.title}
-                    className={`${item.color} rounded-2xl p-8 text-center`}
+                    className={`rounded-13 border ${item.borderColor} ${item.bgColor} shadow-md ${item.shadowColor} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
                   >
-                    <Icon className={`w-10 h-10 ${item.iconColor} mx-auto mb-4`} />
-                    <h3 className="text-lg font-bold text-kcf-dark mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <div className="flex items-center gap-4 px-5 py-4">
+                      <div
+                        className={`w-11 h-11 rounded-13 ${item.iconBg} border ${item.borderColor} flex items-center justify-center shrink-0`}
+                      >
+                        <Icon className={`w-5 h-5 ${item.iconColor}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-base font-bold text-kcf-dark">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-gray-500 leading-relaxed mt-1">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
@@ -123,10 +143,10 @@ export default function FoundationalPrinciplesPage() {
               ].map((item) => (
                 <div
                   key={item.letter}
-                  className="flex items-center gap-6 p-6 rounded-xl bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                  className="flex items-center gap-6 p-6 rounded-13 bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
                 >
                   <div
-                    className={`w-16 h-16 ${item.color} rounded-xl flex items-center justify-center shrink-0`}
+                    className={`w-16 h-16 ${item.color} rounded-13 flex items-center justify-center shrink-0`}
                   >
                     <span className="text-3xl font-bold text-white">
                       {item.letter}
