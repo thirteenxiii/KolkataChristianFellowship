@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MapPin, Mail, Clock, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Mail, Clock } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -33,9 +34,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-kcf-blue flex items-center justify-center text-white font-bold text-sm">
-                KCF
+            <Link href="/" className="flex items-center gap-3 mb-4 group cursor-pointer">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/20 transition-transform group-hover:scale-105">
+                <Image
+                  src="/assets/kcficon.png"
+                  alt="KCF"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-lg font-bold leading-tight">
@@ -56,7 +63,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-13 bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
@@ -65,7 +72,7 @@ export default function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-13 bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="YouTube"
               >
                 <YouTubeIcon className="w-4 h-4" />
@@ -74,7 +81,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-13 bg-white/10 hover:bg-kcf-blue flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -99,11 +106,10 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group"
+                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group cursor-pointer"
                   >
                     <span className="w-1 h-1 rounded-full bg-kcf-gold opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
-                    <ExternalLink className="w-3 h-3 opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -127,7 +133,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group"
+                    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group cursor-pointer"
                   >
                     <span className="w-1 h-1 rounded-full bg-kcf-gold opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
@@ -137,7 +143,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact & CTA */}
           <div>
             <h4 className="text-sm font-bold uppercase tracking-wider mb-5 text-kcf-gold">
               Contact
@@ -161,12 +167,23 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-kcf-gold shrink-0" />
                 <a
                   href="mailto:kcf@kolkatachristianfellowship.net"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                  className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
                   kcf@kolkatachristianfellowship.net
                 </a>
               </li>
             </ul>
+
+            {/* Attend Online CTA */}
+            <a
+              href="/resources/videos"
+              className="mt-6 inline-flex items-center gap-2.5 px-5 py-3 rounded-13 bg-red-600 hover:bg-red-700 transition-colors text-white text-sm font-semibold shadow-lg shadow-red-600/25 cursor-pointer"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              Attend Online
+            </a>
           </div>
         </div>
       </div>
@@ -178,10 +195,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Kolkata Christian Fellowship. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="/about/statement-of-faith" className="hover:text-white transition-colors">
+            <Link href="/about/statement-of-faith" className="hover:text-white transition-colors cursor-pointer">
               Statement of Faith
             </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link href="/contact" className="hover:text-white transition-colors cursor-pointer">
               Contact Us
             </Link>
           </div>
