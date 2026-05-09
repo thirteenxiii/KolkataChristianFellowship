@@ -145,7 +145,7 @@ export default function FoundationalPrinciplesPage() {
                   >
                     <span
                       className="text-5xl font-bold text-white"
-                      style={{ fontFamily: "'Century Gothic', 'CenturyGothic', 'Apple Gothic', sans-serif" }}
+                      style={{ fontFamily: "'Old English Text MT', 'Old English', 'Cloister Black', 'UnifrakturMaguntia', serif" }}
                     >
                       {item.letter}
                     </span>
