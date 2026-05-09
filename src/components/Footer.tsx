@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Mail, Clock, ExternalLink, TvMinimalPlay } from "lucide-react";
+import { MapPin, Mail, Clock, TvMinimalPlay } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -126,7 +126,6 @@ export default function Footer() {
                   >
                     <span className="w-1 h-1 rounded-full bg-kcf-gold opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
-                    <ExternalLink className="w-3 h-3 opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -176,7 +175,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-kcf-gold shrink-0" />
-                <span className="text-sm text-gray-400">
+                <span className="text-sm text-gray-400 whitespace-nowrap">
                   Sunday: 9:45 AM & 11:00 AM
                 </span>
               </li>

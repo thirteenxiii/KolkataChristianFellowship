@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { FileText, Download, Image, Music, BookOpen } from "lucide-react";
 
 const pdfResources = [
@@ -44,6 +46,13 @@ const tabs = [
 ];
 
 export default function ResourceCornerPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Resources+${i + 1}`,
+    alt: `Resource Corner ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   const [activeTab, setActiveTab] = useState("pdf");
 
   useEffect(() => {
@@ -68,6 +77,12 @@ export default function ResourceCornerPage() {
           { label: "Resources", href: "/resources/resource-corner" },
           { label: "Resource Corner", href: "/resources/resource-corner" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/resources/gallery"
+        sectionTitle="Resource Corner"
       />
 
       <section className="py-20 lg:py-28 bg-white">

@@ -2,10 +2,19 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Music, BookOpen, Users, Heart, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export default function MainServicePage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=MainService+${i + 1}`,
+    alt: `Main Service ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,6 +60,12 @@ export default function MainServicePage() {
           { label: "Services", href: "/services/main-service" },
           { label: "Main Service", href: "/services/main-service" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/services/gallery"
+        sectionTitle="Main Service"
       />
 
       <section className="py-20 lg:py-28 bg-white">

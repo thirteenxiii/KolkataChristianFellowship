@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { BookOpen, Users, Heart, Globe } from "lucide-react";
 
 export default function CollegeCareerPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=CnC+${i + 1}`,
+    alt: `College & Career ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,6 +36,12 @@ export default function CollegeCareerPage() {
           { label: "Ministries", href: "/ministries/college-career" },
           { label: "College & Career", href: "/ministries/college-career" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/ministries/gallery"
+        sectionTitle="College & Career"
       />
 
       <section className="py-20 lg:py-28 bg-white">

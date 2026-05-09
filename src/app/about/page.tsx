@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { ArrowRight, MapPin, Clock, Church } from "lucide-react";
 
 const cards = [
@@ -45,6 +47,13 @@ const cards = [
 ];
 
 export default function AboutPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=About+${i + 1}`,
+    alt: `About KCF ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -64,6 +73,12 @@ export default function AboutPage() {
         title="About KCF"
         subtitle="Discover our story, our vision, and what we believe."
         breadcrumbs={[{ label: "About", href: "/about" }]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/about/gallery"
+        sectionTitle="About KCF"
       />
 
       {/* ── Info Cards (2×2 grid, 1/3 image + 2/3 content) ── */}

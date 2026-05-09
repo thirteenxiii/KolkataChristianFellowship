@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Clock, Flag, MapPin, Building2, Globe, Church, Heart } from "lucide-react";
 
 export default function HourOfPowerPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=HourOfPower+${i + 1}`,
+    alt: `Hour of Power ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,6 +45,12 @@ export default function HourOfPowerPage() {
           { label: "Services", href: "/services/hour-of-power" },
           { label: "Hour of Power", href: "/services/hour-of-power" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/services/gallery"
+        sectionTitle="Hour of Power"
       />
 
       <section className="py-20 lg:py-28 bg-white">

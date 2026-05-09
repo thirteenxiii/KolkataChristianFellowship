@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { BookOpen, Cross, Heart, Users, Shield, Flame } from "lucide-react";
 
 export default function JerusalemPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Jerusalem+${i + 1}`,
+    alt: `Jerusalem church gallery image ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -61,6 +70,12 @@ export default function JerusalemPage() {
           { label: "DNA Study", href: "/dna-study/jerusalem" },
           { label: "Jerusalem", href: "/dna-study/jerusalem" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/dna-study/gallery"
+        sectionTitle="Jerusalem"
       />
 
       <section className="py-20 lg:py-28 bg-white">

@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Users, Calendar, MessageCircle, Music } from "lucide-react";
 
 export default function TeensOnTrackPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=TOT+${i + 1}`,
+    alt: `Teens on Track ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,6 +36,12 @@ export default function TeensOnTrackPage() {
           { label: "Ministries", href: "/ministries/teens-on-track" },
           { label: "Teens on Track", href: "/ministries/teens-on-track" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/ministries/gallery"
+        sectionTitle="Teens on Track"
       />
 
       <section className="py-20 lg:py-28 bg-white">

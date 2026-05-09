@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Calendar, Heart, Users, Monitor, Scissors, Sun } from "lucide-react";
 
 export default function SonarpurPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Sonarpur+${i + 1}`,
+    alt: `Sonarpur ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,6 +48,12 @@ export default function SonarpurPage() {
           { label: "Our Impact", href: "/impact/sonarpur" },
           { label: "Sonarpur", href: "/impact/sonarpur" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/impact/gallery"
+        sectionTitle="Sonarpur"
       />
 
       <section className="py-20 lg:py-28 bg-white">

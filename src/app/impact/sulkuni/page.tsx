@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Heart, Stethoscope, Home } from "lucide-react";
 
 export default function SulkuniPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Sulkuni+${i + 1}`,
+    alt: `Sulkuni ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,6 +36,12 @@ export default function SulkuniPage() {
           { label: "Our Impact", href: "/impact/sulkuni" },
           { label: "Sulkuni", href: "/impact/sulkuni" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/impact/gallery"
+        sectionTitle="Sulkuni"
       />
 
       <section className="py-20 lg:py-28 bg-white">

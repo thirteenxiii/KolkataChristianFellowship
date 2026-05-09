@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Heart, Shield, BookOpen } from "lucide-react";
 
 export default function FoundationalPrinciplesPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Principles+${i + 1}`,
+    alt: `Foundational Principles ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -60,6 +69,12 @@ export default function FoundationalPrinciplesPage() {
           { label: "About", href: "/about" },
           { label: "Foundational Principles", href: "/about/foundational-principles" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/about/gallery"
+        sectionTitle="Foundational Principles"
       />
 
       <section className="py-20 lg:py-28 bg-white">
@@ -138,23 +153,25 @@ export default function FoundationalPrinciplesPage() {
               ].map((item) => (
                 <div
                   key={item.letter}
-                  className="flex items-center gap-8 p-8 rounded-13 bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                  className="flex items-stretch rounded-13 bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow overflow-hidden"
                 >
                   <div
-                    className="w-20 h-20 bg-black rounded-13 flex items-center justify-center shrink-0"
+                    className="w-28 bg-black flex items-center justify-center shrink-0"
                   >
                     <span
-                      className="text-5xl font-bold text-white"
+                      className="text-6xl font-normal text-white"
                       style={{ fontFamily: "'Old English Text MT', 'Old English', 'Cloister Black', 'UnifrakturMaguntia', serif" }}
                     >
                       {item.letter}
                     </span>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-kcf-dark">
-                      {item.word}
-                    </h3>
-                    <p className="text-gray-600 text-base mt-1">{item.desc}</p>
+                  <div className="flex items-center px-8 py-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-kcf-dark">
+                        {item.word}
+                      </h3>
+                      <p className="text-gray-600 text-base mt-1">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               ))}

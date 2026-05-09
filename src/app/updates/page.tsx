@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Calendar, MapPin, Clock, Bell, Church, Users, Heart } from "lucide-react";
 
 const updates = [
@@ -79,6 +81,13 @@ const serviceTimes = [
 ];
 
 export default function UpdatesPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Updates+${i + 1}`,
+    alt: `Updates gallery image ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -101,6 +110,12 @@ export default function UpdatesPage() {
           { label: "Updates", href: "/updates" },
           { label: "Church Updates", href: "/updates" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/updates/gallery"
+        sectionTitle="Updates"
       />
 
       {/* Service Times */}

@@ -162,6 +162,15 @@ const mobileItemVariants = {
 /* ──────────────────────────────────────────────
    Component
    ────────────────────────────────────────────── */
+const megaMenuImages = [
+  "/assets/Mega menu images/WhatsApp Image 2026-05-09 at 2.25.30 PM (1).jpeg",
+  "/assets/Mega menu images/WhatsApp Image 2026-05-09 at 2.25.30 PM.jpeg",
+  "/assets/Mega menu images/WhatsApp Image 2026-05-09 at 2.28.07 PM.jpeg",
+  "/assets/Mega menu images/WhatsApp Image 2026-05-09 at 2.36.05 PM (1).jpeg",
+  "/assets/Mega menu images/WhatsApp Image 2026-05-09 at 2.36.05 PM.jpeg",
+  "/assets/Mega menu images/WhatsApp Image 2026-05-09 at 2.36.06 PM.jpeg",
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -270,48 +279,36 @@ export default function Navbar() {
                     {cat.href && !hasMega ? (
                       <Link
                         href={cat.href}
-                        className={`relative px-3.5 py-2 text-sm rounded-13 transition-colors flex items-center gap-1 cursor-pointer ${
+                        className={`relative px-3 py-1.5 text-xs transition-colors flex items-center gap-1 cursor-pointer ${
                           active
                             ? scrolled
-                              ? "text-kcf-blue"
-                              : "text-kcf-gold"
+                              ? "text-kcf-blue border-l-3 border-kcf-blue pl-2"
+                              : "text-kcf-gold border-l-3 border-kcf-gold pl-2"
                             : scrolled
-                              ? "text-kcf-dark/80 hover:text-kcf-blue"
-                              : "text-white/85 hover:text-white"
+                              ? "text-kcf-dark/80 hover:text-kcf-blue pl-3"
+                              : "text-white/85 hover:text-white pl-3"
                         }`}
                       >
-                        {cat.label}
-                        {active && (
-                          <motion.span
-                            layoutId="nav-indicator"
-                            className="absolute -bottom-0.5 left-2 right-2 h-0.5 rounded-full bg-kcf-gold"
-                          />
-                        )}
+                        <span className="uppercase tracking-wider">{cat.label}</span>
                       </Link>
                     ) : (
                       <button
                         onFocus={() => setActiveMega(cat.label)}
-                        className={`relative px-3.5 py-2 text-sm rounded-13 transition-colors flex items-center gap-1 cursor-pointer ${
+                        className={`relative px-3 py-1.5 text-xs transition-colors flex items-center gap-1 cursor-pointer ${
                           active
                             ? scrolled
-                              ? "text-kcf-blue"
-                              : "text-kcf-gold"
+                              ? "text-kcf-blue border-l-3 border-kcf-blue pl-2"
+                              : "text-kcf-gold border-l-3 border-kcf-gold pl-2"
                             : scrolled
-                              ? "text-kcf-dark/80 hover:text-kcf-blue"
-                              : "text-white/85 hover:text-white"
+                              ? "text-kcf-dark/80 hover:text-kcf-blue pl-3"
+                              : "text-white/85 hover:text-white pl-3"
                         }`}
                       >
-                        {cat.label}
+                        <span className="uppercase tracking-wider">{cat.label}</span>
                         <CrucifixIcon
-                          className="w-3.5 h-3.5"
+                          className="w-3 h-3"
                           isActive={activeMega === cat.label}
                         />
-                        {active && (
-                          <motion.span
-                            layoutId="nav-indicator"
-                            className="absolute -bottom-0.5 left-2 right-2 h-0.5 rounded-full bg-kcf-gold"
-                          />
-                        )}
                       </button>
                     )}
 
@@ -335,11 +332,13 @@ export default function Navbar() {
                             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-kcf-blue via-kcf-gold to-kcf-blue" />
 
                             <div className="flex">
-                              {/* Left: KCF Logo */}
+                              {/* Left: KCF Logo with rotating mega menu images */}
                               <div className="w-[200px] shrink-0 relative overflow-hidden bg-kcf-blue flex items-center justify-center">
                                 <div
-                                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-                                  style={{ backgroundImage: "url('/assets/kcficon.png')" }}
+                                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+                                  style={{
+                                    backgroundImage: `url('${megaMenuImages[navConfig.indexOf(cat) % megaMenuImages.length]}')`,
+                                  }}
                                 />
                                 <div className="relative z-10 text-center px-4">
                                   <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-white/20 flex items-center justify-center">
@@ -495,7 +494,7 @@ export default function Navbar() {
                               : "text-kcf-dark hover:bg-gray-50"
                           }`}
                         >
-                          {cat.label}
+                          <span className="uppercase tracking-wider">{cat.label}</span>
                         </Link>
                       ) : (
                         <>
@@ -505,7 +504,7 @@ export default function Navbar() {
                             }
                             className="w-full flex items-center justify-between px-4 py-3 rounded-13 text-sm font-semibold text-kcf-dark hover:bg-gray-50 cursor-pointer"
                           >
-                            {cat.label}
+                            <span className="uppercase tracking-wider">{cat.label}</span>
                             <CrucifixIcon
                               className="w-4 h-4"
                               isActive={isOpen}

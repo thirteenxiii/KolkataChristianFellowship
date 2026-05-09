@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 function YoutubeIcon({ className }: { className?: string }) {
@@ -48,6 +50,13 @@ function getYouTubeEmbedUrl(url: string): string {
 }
 
 export default function VideosPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Videos+${i + 1}`,
+    alt: `Videos ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [activeSeries, setActiveSeries] = useState(0);
   const [activePart, setActivePart] = useState(0);
@@ -77,6 +86,12 @@ export default function VideosPage() {
           { label: "Resources", href: "/resources/videos" },
           { label: "Videos", href: "/resources/videos" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/resources/gallery"
+        sectionTitle="Videos"
       />
 
       <section className="py-20 lg:py-28 bg-white">

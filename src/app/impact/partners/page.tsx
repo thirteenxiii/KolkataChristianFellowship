@@ -2,9 +2,17 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
-import { Globe, Heart, Users } from "lucide-react";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 
 export default function PartnersPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Partners+${i + 1}`,
+    alt: `Our Partners ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -40,6 +48,12 @@ export default function PartnersPage() {
         ]}
       />
 
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/impact/gallery"
+        sectionTitle="Our Partners"
+      />
+
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           <div className="reveal-on-scroll mb-16">
@@ -52,32 +66,25 @@ export default function PartnersPage() {
             </p>
           </div>
 
-          <div className="space-y-4 reveal-on-scroll">
-            {regions.map((region) => (
-              <div
-                key={region.name}
-                className="p-5 rounded-13 bg-white shadow-md border border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-              >
-                <div className="flex items-center gap-3">
-                  <Globe className="w-5 h-5 text-kcf-blue shrink-0" />
-                  <span className="font-semibold text-kcf-dark">{region.name}</span>
-                </div>
-                <div className="flex items-center gap-4 text-sm text-gray-600">
-                  {region.churches && (
-                    <span className="flex items-center gap-1">
-                      <Heart className="w-3.5 h-3.5 text-kcf-gold" />
-                      {region.churches}
-                    </span>
-                  )}
-                  {region.children && (
-                    <span className="flex items-center gap-1">
-                      <Users className="w-3.5 h-3.5 text-kcf-gold" />
-                      {region.children}
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
+          <div className="overflow-hidden rounded-13 border border-gray-200 reveal-on-scroll">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-kcf-blue text-white">
+                  <th className="text-left px-4 py-3 font-semibold">Region</th>
+                  <th className="text-left px-4 py-3 font-semibold">Churches / Outreach</th>
+                  <th className="text-left px-4 py-3 font-semibold">Children Impacted</th>
+                </tr>
+              </thead>
+              <tbody>
+                {regions.map((region, i) => (
+                  <tr key={region.name} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="px-4 py-3 font-medium text-kcf-dark">{region.name}</td>
+                    <td className="px-4 py-3 text-gray-600">{region.churches}</td>
+                    <td className="px-4 py-3 text-gray-600">{region.children || "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

@@ -19,24 +19,38 @@ const photoCategories = [
 ];
 
 const galleryImages = [
-  { src: "http://kolkatachristianfellowship.net/admin/upload/58049-Our_Partners.jpg", alt: "Our Partners", category: "Our Partners" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/41781-Liluah%201.jpg", alt: "Liluah", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/62219-Liluah%203%20news.jpg", alt: "Liluah News", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/18349-Liluah%202.jpg", alt: "Liluah", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/30211-Rajarhat%203.jpg", alt: "Rajarhat", category: "Rajarhat Fellowship" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/49762-Rajarhat%204.jpg", alt: "Rajarhat", category: "Rajarhat Fellowship" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/32797-Sonarpur%20Church%201.jpg", alt: "Sonarpur Church", category: "Sonarpur" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/66891-Sonarpur%20Church%202.JPG", alt: "Sonarpur Church", category: "Sonarpur" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/56150-Madhyamgram%201.jpg", alt: "Madhyamgram", category: "Madhyamgram" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/16730-Madhyamgram%202.jpg", alt: "Madhyamgram", category: "Madhyamgram" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/50775-Sulkuni%201.jpg", alt: "Sulkuni", category: "Sulkuni" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/35183-Sulkuni%202.jpg", alt: "Sulkuni", category: "Sulkuni" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/47066-KCF%20Main2.jpg", alt: "KCF Main", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/153530319946_150477902439_k1.jpg", alt: "KCF", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/153530330816_150477902528_k2.jpg", alt: "KCF", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/1535303338110_150477902546_k3.jpg", alt: "KCF", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/1535303364310_150477902546_k4.jpg", alt: "KCF", category: "KCF Main Church" },
-  { src: "http://kolkatachristianfellowship.net/admin/upload/153530340047_150477902558_k5.jpg", alt: "KCF", category: "KCF Main Church" },
+  // KCF Main Church
+  { src: "/assets/heroes.jpg", alt: "KCF Main Church", category: "KCF Main Church" },
+  { src: "/assets/Welcome.png", alt: "KCF Welcome", category: "KCF Main Church" },
+  { src: "/assets/easter.jpg", alt: "Easter Celebration", category: "KCF Main Church" },
+  { src: "/assets/palm-sunday.jpg", alt: "Palm Sunday", category: "KCF Main Church" },
+  // Rajarhat Fellowship
+  { src: "/assets/heroes.jpg", alt: "Rajarhat Fellowship", category: "Rajarhat Fellowship" },
+  { src: "/assets/Welcome.png", alt: "Rajarhat Welcome", category: "Rajarhat Fellowship" },
+  // Sonarpur
+  { src: "/assets/easter.jpg", alt: "Sonarpur Church", category: "Sonarpur" },
+  { src: "/assets/palm-sunday.jpg", alt: "Sonarpur Gathering", category: "Sonarpur" },
+  // Madhyamgram
+  { src: "/assets/heroes.jpg", alt: "Madhyamgram", category: "Madhyamgram" },
+  { src: "/assets/Welcome.png", alt: "Madhyamgram Fellowship", category: "Madhyamgram" },
+  // Sulkuni
+  { src: "/assets/easter.jpg", alt: "Sulkuni", category: "Sulkuni" },
+  { src: "/assets/palm-sunday.jpg", alt: "Sulkuni Outreach", category: "Sulkuni" },
+  // Night to Shine
+  { src: "/assets/heroes.jpg", alt: "Night to Shine", category: "Night to Shine" },
+  { src: "/assets/Welcome.png", alt: "Night to Shine Event", category: "Night to Shine" },
+  // Kids Church
+  { src: "/assets/easter.jpg", alt: "Kids Church", category: "Kids Church" },
+  { src: "/assets/palm-sunday.jpg", alt: "Kids Church Activity", category: "Kids Church" },
+  // School of Excellence
+  { src: "/assets/heroes.jpg", alt: "School of Excellence", category: "School of Excellence" },
+  { src: "/assets/Welcome.png", alt: "School of Excellence Class", category: "School of Excellence" },
+  // Nirmaan
+  { src: "/assets/easter.jpg", alt: "Nirmaan", category: "Nirmaan" },
+  { src: "/assets/palm-sunday.jpg", alt: "Nirmaan Initiative", category: "Nirmaan" },
+  // Our Partners
+  { src: "/assets/heroes.jpg", alt: "Our Partners", category: "Our Partners" },
+  { src: "/assets/Welcome.png", alt: "Partner Event", category: "Our Partners" },
 ];
 
 export default function PhotosPage() {
@@ -136,11 +150,12 @@ export default function PhotosPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {filteredImages.map((img, i) => (
               <div
-                key={i}
-                className="reveal-on-scroll group relative aspect-[4/3] rounded-13 overflow-hidden bg-gray-100 cursor-pointer"
+                key={`${activeCategory}-${i}`}
+                className="group relative aspect-[4/3] rounded-13 overflow-hidden bg-gray-100 cursor-pointer"
                 onClick={() => openLightbox(i)}
               >
                 <img
+                  key={`img-${activeCategory}-${i}`}
                   src={img.src}
                   alt={img.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -217,7 +232,7 @@ export default function PhotosPage() {
               }}
             />
             <p className="text-white/70 text-sm text-center mt-4">
-              {filteredImages[lightboxIndex].category} — {lightboxIndex + 1} of{" "}
+              {filteredImages[lightboxIndex].category} &mdash; {lightboxIndex + 1} of{" "}
               {filteredImages.length}
             </p>
           </div>

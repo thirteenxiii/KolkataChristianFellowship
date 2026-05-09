@@ -2,9 +2,18 @@
 
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
+import MiniGallery from "@/components/MiniGallery";
+import type { GalleryImage } from "@/components/MiniGallery";
 import { Send, Globe, Users, Heart, Lightbulb, ArrowRight } from "lucide-react";
 
 export default function AntiochPage() {
+  const galleryImages: GalleryImage[] = Array.from({ length: 8 }, (_, i) => ({
+    src: `https://placehold.co/600x600/e8f0fe/1a3a6b?text=Antioch+${i + 1}`,
+    alt: `Antioch ${i + 1}`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }));
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -56,6 +65,12 @@ export default function AntiochPage() {
           { label: "DNA Study", href: "/dna-study/antioch" },
           { label: "Antioch", href: "/dna-study/antioch" },
         ]}
+      />
+
+      <MiniGallery
+        images={galleryImages}
+        galleryHref="/dna-study/gallery"
+        sectionTitle="Antioch"
       />
 
       <section className="py-20 lg:py-28 bg-white">
