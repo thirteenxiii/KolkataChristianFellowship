@@ -64,40 +64,33 @@ export default function FoundationalPrinciplesPage() {
 
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
-          {/* Three Pillars — Stacked Cards */}
+          {/* Three Pillars — Side by Side */}
           <div className="reveal-on-scroll mb-20">
             <h2 className="text-3xl lg:text-4xl font-bold text-kcf-dark mb-8 text-center">
               Our Threefold Commitment
             </h2>
 
-            <div className="relative flex flex-col items-center pb-24 lg:pb-28">
-              {commitments.map((item, index) => {
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {commitments.map((item) => {
                 const Icon = item.icon;
-                const zIndex = commitments.length - index;
-                const offsetY = index * 56;
                 return (
                   <div
                     key={item.title}
-                    className="w-full max-w-lg"
-                    style={{ zIndex, marginTop: index === 0 ? 0 : `-${offsetY}px` }}
+                    className={`rounded-13 border ${item.borderColor} ${item.bgColor} shadow-md ${item.shadowColor} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
                   >
-                    <div
-                      className={`relative rounded-13 border ${item.borderColor} ${item.bgColor} shadow-lg ${item.shadowColor} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
-                    >
-                      <div className="flex items-center gap-4 px-5 py-4">
-                        <div
-                          className={`w-11 h-11 rounded-13 ${item.iconBg} border ${item.borderColor} flex items-center justify-center shrink-0`}
-                        >
-                          <Icon className={`w-5 h-5 ${item.iconColor}`} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h3 className="text-base font-bold text-kcf-dark">
-                            {item.title}
-                          </h3>
-                          <p className="text-sm text-gray-500 leading-relaxed mt-1 line-clamp-2">
-                            {item.desc}
-                          </p>
-                        </div>
+                    <div className="flex flex-col items-center text-center px-6 py-8">
+                      <div
+                        className={`w-14 h-14 rounded-13 ${item.iconBg} border ${item.borderColor} flex items-center justify-center shrink-0 mb-4`}
+                      >
+                        <Icon className={`w-6 h-6 ${item.iconColor}`} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-kcf-dark mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-gray-500 leading-relaxed">
+                          {item.desc}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -121,49 +114,47 @@ export default function FoundationalPrinciplesPage() {
                   letter: "B",
                   word: "Bless",
                   desc: "We want to be a Church that blesses the Lord and one another.",
-                  color: "bg-kcf-blue",
                 },
                 {
                   letter: "U",
                   word: "Unite",
                   desc: "We want to grow in unity in the fellowship.",
-                  color: "bg-kcf-blue-light",
                 },
                 {
                   letter: "I",
                   word: "Intercede",
                   desc: "We want to be known as a body that intercedes.",
-                  color: "bg-kcf-blue",
                 },
                 {
                   letter: "L",
                   word: "Labour",
                   desc: "We want to be diligent in labouring for the Lord.",
-                  color: "bg-kcf-blue-light",
                 },
                 {
                   letter: "D",
                   word: "Disciple",
                   desc: "We want to stay committed to discipleship.",
-                  color: "bg-kcf-blue",
                 },
               ].map((item) => (
                 <div
                   key={item.letter}
-                  className="flex items-center gap-6 p-6 rounded-13 bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                  className="flex items-center gap-8 p-8 rounded-13 bg-white shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
                 >
                   <div
-                    className={`w-16 h-16 ${item.color} rounded-13 flex items-center justify-center shrink-0`}
+                    className="w-20 h-20 bg-black rounded-13 flex items-center justify-center shrink-0"
                   >
-                    <span className="text-3xl font-bold text-white">
+                    <span
+                      className="text-5xl font-bold text-white"
+                      style={{ fontFamily: "'Century Gothic', 'CenturyGothic', 'Apple Gothic', sans-serif" }}
+                    >
                       {item.letter}
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-kcf-dark">
+                    <h3 className="text-2xl font-bold text-kcf-dark">
                       {item.word}
                     </h3>
-                    <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                    <p className="text-gray-600 text-base mt-1">{item.desc}</p>
                   </div>
                 </div>
               ))}
